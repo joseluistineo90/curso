@@ -1,0 +1,1837 @@
+From: <Guardado por Microsoft Internet Explorer 7>
+Subject: Tutorial de Visual basic - Vectores y matrices
+Date: Thu, 18 Nov 2010 11:17:42 -0600
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01CB8712.38374B20"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5512
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01CB8712.38374B20
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.recursosvisualbasic.com.ar/htm/tutoriales/tutorial-basico6.htm
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Tutorial de Visual basic - Vectores y =
+matrices</TITLE><!-- InstanceBegin =
+template=3D"/Templates/tutoriales.dwt" codeOutsideHTMLIsLocked=3D"false" =
+--><!-- InstanceBeginEditable name=3D"doctitle" -->
+<META=20
+content=3D" Descripci=F3n de los Arreglos, matrices, vectores y vectores =
+de controles en vb"=20
+name=3Ddescription><!-- InstanceEndEditable -->
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Diso-8859-1"><!-- InstanceBeginEditable name=3D"head" --><!-- =
+InstanceEndEditable --><!-- InstanceParam name=3D"class" type=3D"text" =
+value=3D"ad-left" -->
+<SCRIPT class=3Djavascript=20
+src=3D"http://www.recursosvisualbasic.com.ar/js/shCore.js"></SCRIPT>
+
+<SCRIPT class=3Djavascript=20
+src=3D"http://www.recursosvisualbasic.com.ar/js/shBrushVb.js"></SCRIPT>
+<LINK =
+href=3D"http://www.recursosvisualbasic.com.ar/css/tutoriales-manuales-2.c=
+ss"=20
+type=3Dtext/css rel=3Dstylesheet>
+<META content=3D"MSHTML 6.00.5730.13" name=3DGENERATOR></HEAD>
+<BODY>
+<DIV id=3Dcontenido>
+<DIV id=3Dsubcontenido><!-- Google CSE Search Box Begins  --><!-- Google =
+CSE Search Box Begins  --><SPAN=20
+class=3Dad-right>
+<FORM id=3Dsearchbox_006154211409403389812:rsvroqctr3c=20
+action=3Dhttp://www.recursosvisualbasic.com.ar/htm/menu-principal/buscar.=
+htm><INPUT=20
+type=3Dhidden value=3D006154211409403389812:rsvroqctr3c name=3Dcx> =
+<INPUT type=3Dhidden=20
+value=3DFORID:11 name=3Dcof> <INPUT size=3D30 name=3Dq> <INPUT =
+type=3Dsubmit value=3DBuscar name=3Dsa> </FORM>
+<SCRIPT=20
+src=3D"http://www.google.com/coop/cse/brand?form=3Dsearchbox_006154211409=
+403389812%3Arsvroqctr3c&amp;lang=3Des"=20
+type=3Dtext/javascript></SCRIPT>
+</SPAN>
+<P class=3DCabecera-contenido>Secci=F3n de tutoriales y manuales vb =
+</P><!-- InstanceBeginEditable name=3D"EditRegion-encabezado" -->
+<H1>Los arreglos, matrices, vectores y vectores de controles</H1>
+<P><A=20
+href=3D"http://www.recursosvisualbasic.com.ar/htm/tutoriales/tutorial_vis=
+ual_basic_menu.htm">Volver=20
+al =EDndice</A></P><!-- InstanceEndEditable --><!-- =
+InstanceBeginEditable name=3D"EditRegionSub" --><!-- InstanceEndEditable =
+-->
+<P><BR></P>
+<HR>
+<SPAN class=3Dad-left>
+<SCRIPT type=3Dtext/javascript><!--=0A=
+google_ad_client =3D "pub-9569018236517885";=0A=
+/* 336x280 */=0A=
+google_ad_slot =3D "1328054355";=0A=
+google_ad_width =3D 336;=0A=
+google_ad_height =3D 280;=0A=
+//-->=0A=
+</SCRIPT>
+
+<SCRIPT src=3D"http://pagead2.googlesyndication.com/pagead/show_ads.js"=20
+type=3Dtext/javascript>=0A=
+</SCRIPT>
+</SPAN>
+<P>&nbsp;</P><!-- InstanceBeginEditable name=3D"codigo-trucos" -->
+<P>&nbsp;</P>
+<H2>Contenido</H2>
+<P><A=20
+href=3D"http://www.recursosvisualbasic.com.ar/htm/tutoriales/tutorial-bas=
+ico6.htm#arreglos">1=20
+- Arreglos y vectores</A></P>
+<P><A=20
+href=3D"http://www.recursosvisualbasic.com.ar/htm/tutoriales/tutorial-bas=
+ico6.htm#declaracion-arreglos">1.1=20
+- Declaraci=F3n de los arreglos en el c=F3digo</A></P>
+<P><A=20
+href=3D"http://www.recursosvisualbasic.com.ar/htm/tutoriales/tutorial-bas=
+ico6.htm#acceder-al-arreglo">1.2=20
+- Acceder a los datos de un arreglo</A></P>
+<P><A=20
+href=3D"http://www.recursosvisualbasic.com.ar/htm/tutoriales/tutorial-bas=
+ico6.htm#arreglos-estructuras">1.3=20
+- Arreglos y estructuras (UDT) </A></P>
+<P><A=20
+href=3D"http://www.recursosvisualbasic.com.ar/htm/tutoriales/tutorial-bas=
+ico6.htm#matrices">2=20
+- Matrices</A></P>
+<P><A=20
+href=3D"http://www.recursosvisualbasic.com.ar/htm/tutoriales/tutorial-bas=
+ico6.htm#matriz-dos-dimensiones">2.1=20
+- Ejemplo de matriz de 2 dimensiones</A></P>
+<P><A=20
+href=3D"http://www.recursosvisualbasic.com.ar/htm/tutoriales/tutorial-bas=
+ico6.htm#vectores-dinamicos">3=20
+- Arreglos y vectores din=E1micos</A></P>
+<P><A=20
+href=3D"http://www.recursosvisualbasic.com.ar/htm/tutoriales/tutorial-bas=
+ico6.htm#ejemplo-vectores-dinamicos">3.1=20
+- Ejemplo para crear un Vector din=E1mico</A></P>
+<P><A=20
+href=3D"http://www.recursosvisualbasic.com.ar/htm/tutoriales/tutorial-bas=
+ico6.htm#lbound-ubound">4=20
+- Funciones de VB para trabajar con Arreglos - LBound y UBound</A></P>
+<P><A=20
+href=3D"http://www.recursosvisualbasic.com.ar/htm/tutoriales/tutorial-bas=
+ico6.htm#ejemplos-lbound-ubound">4.1=20
+- Ejemplos de Lbound y Ubound</A></P>
+<P><A=20
+href=3D"http://www.recursosvisualbasic.com.ar/htm/tutoriales/tutorial-bas=
+ico6.htm#join-split-filter">4.2=20
+- Funci=F3n Join, Split y Filter</A></P>
+<P><A=20
+href=3D"http://www.recursosvisualbasic.com.ar/htm/tutoriales/tutorial-bas=
+ico6.htm#arreglo-de-controles">5=20
+- Los arreglos de controles</A></P>
+<P><A=20
+href=3D"http://www.recursosvisualbasic.com.ar/htm/tutoriales/tutorial-bas=
+ico6.htm#crear-arreglo-de-controles">5.1=20
+- Ejemplo para crear un arreglo de controles</A></P>
+<P><A=20
+href=3D"http://www.recursosvisualbasic.com.ar/htm/tutoriales/tutorial-bas=
+ico6.htm#arreglo-de-controles-en-parametro">5.2=20
+- Pasar arreglo de controles como par=E1metro a un procedimento</A></P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<HR>
+
+<H2><A id=3Darreglos name=3Darreglos></A>1 - Arreglos y vectores</H2>
+<P>Los Arreglos se utilizan para almacenar un conjunto de variables, que =
+sean=20
+del mismo tipo de dato, y todas estas bajo un mismo nombre. </P>
+<P>Por ejemplo imaginemos que tenemos 20 variables de tipo String que =
+almacenan=20
+nombres (nombre1, nombre2, etc..). si yo ahora quisiera pasar todas =
+estas=20
+cadenas a min=FAsculas tendr=EDa que utilizar la funci=F3n Lcase con =
+cada variable:=20
+nombre1 =3D Lcase(nombre1), nombre2 =3D Lcase(nombre2), etc..</P>
+<P>En cambio si utilizara un arreglo solucionar=EDa mi problema solo a =
+esto</P><PRE class=3DtablaCodigo>    Dim nombres(30) As String
+
+    For x =3D 0 To 30
+
+        nombres(x) =3D LCase(nombres(x))
+   =20
+    Next&nbsp;</PRE>
+<P>&nbsp;</P>
+<P>Siguiendo el ejemplo anterior: en vez de escribir la sentencia Lcase =
+30 veces=20
+para cada variable, hemos utilizado un <STRONG>arreglo</STRONG> llamado=20
+<STRONG>nombres</STRONG> con un n=FAmero de =EDndice 30 , es decir que =
+almacena 30=20
+datos de tipo String</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<H2><A id=3Ddeclaracion-arreglos name=3Ddeclaracion-arreglos></A>1.1 - =
+Declaraci=F3n=20
+de los arreglos en el c=F3digo </H2>
+<P>Para crear un arreglo se debe en primer lugar declararlo como =
+cualquier otra=20
+variable, la =FAnica diferencia es que debemos indicar la cantidad de =
+elementos=20
+que contendr=E1 el arreglo, colocando el n=FAmero de =EDndice entre =
+par=E9ntesis. Por=20
+ejemplo :</P>
+<P>Lo siguiente crea un arreglo de 15 elementos o datos de tipo =
+integer</P>
+<P class=3DtablaCodigo>Dim miArreglo (1 to 15) as integer</P>
+<P>&nbsp;</P>
+<P>Esto crea un arreglo de 11 elementos o datos de tipo String</P>
+<P class=3DtablaCodigo>Dim empleados (10) as String</P>
+<P>&nbsp;</P>
+<P>Como podemos ver en el primer ejemplo hemos declarado un arreglo =
+llamado=20
+<STRONG>miArreglo</STRONG> y entre par=E9ntesis hemos declarado el rango =
+de=20
+capacidad del mismo, es decir la cantidad de datos que podr=E1 =
+contener</P>
+<P>El primer n=FAmero , el 1 , indica el l=EDmite inferior del mismo, y =
+el n=FAmero 15=20
+indica el l=EDmite m=E1ximo del arreglo, conformando de esta manera un =
+arreglo que=20
+podr=E1 almacenar 15 datos de tipo string.</P>
+<P>En el segundo ejemplo, declaramos un arreglo de 11 elementos de tipo =
+string.=20
+Como pod=E9s ver hemos indicado solo un n=FAmero que representa el valor =
+m=E1ximo del=20
+mismo. Cabe aclarar que hemos puesto de =EDndice el n=FAmero 10, pero en =
+realidad el=20
+arreglo contiene 11 elementos ya que cuando NO indicamos el limite =
+inferior , se=20
+asume que el mismo comienza desde el 0.</P>
+<P><STRONG>Importante</STRONG>: los arreglos se dividen en 2 grupos, los =
+
+<STRONG>vectores</STRONG> y las <STRONG>matrices</STRONG>. Los vectores =
+son=20
+arreglos que contienen <STRONG>una sola dimensi=F3n</STRONG> y las=20
+<STRONG>matrices 2 o mas dimensiones</STRONG>.</P>
+<P>&nbsp;</P>
+<H2><A id=3Dacceder-al-arreglo name=3Dacceder-al-arreglo></A>1.2 - =
+Acceder a los=20
+datos de un arreglo</H2>
+<P>Para acceder a los datos de un arreglo o vector, debemos hacerlo =
+mediante el=20
+<STRONG>=EDndice</STRONG> o <STRONG>n=FAmero del elemento</STRONG> del =
+mismo. Por=20
+ejemplo:</P>
+<P class=3DtablaCodigo>Dim alumnos(1 To 4) As String<BR><BR>alumnos(1) =
+=3D=20
+"juan"<BR>alumnos(2) =3D "micaela"<BR>alumnos(3) =3D =
+"mar=EDa"<BR>alumnos(4) =3D=20
+"ignacio"</P>
+<P>&nbsp;</P>
+<P>Primero declaramos un arreglo llamado alumnos, de tipo string y que =
+contendr=E1=20
+4 elementos. Luego le asignamos un valor de cadena como a cualquier otra =
+
+variable de tipo string, pero con la diferencia que para referirnos al =
+elemento=20
+utilizamos el n=B0 de =EDndice del mismo.</P>
+<P>Otro ejemplo</P><PRE class=3DtablaCodigo>Dim paises(2) As String
+   =20
+    <SPAN class=3DS1>' Llena el vector con datos</SPAN>
+    paises(0) =3D "Argentina"
+    paises(1) =3D "Per=FA"
+    paises(2) =3D "Brasil"
+   =20
+   <SPAN class=3DS1> ' Recorre los elementos del vector</SPAN>
+    For x =3D 0 To 2
+
+        MsgBox "Nombre del pa=EDs : " &amp; paises(x)
+
+    Next x&nbsp;</PRE>
+<P>&nbsp;</P>
+<P>En este =FAltimo ejemplo, declaramos y creamos un vector de 3 =
+elementos que=20
+contendr=E1 el nombre de 3 pa=EDses. Luego en un bucle For utilizamos la =
+funci=F3n=20
+MsgBox para mostrar los elementos del arreglo, pas=E1ndole como =
+par=E1metro del=20
+=EDndice la variable x del bucle For</P>
+<P>&nbsp;</P>
+<H2><A id=3Darreglos-estructuras name=3Darreglos-estructuras></A>1.3 - =
+Utilizar una=20
+estructura Type o UDT en un arreglo</H2>
+<P>Como vimos, en un arreglo podemos almacenar datos de cualquier tipo =
+pero no=20
+mezclarlos, es decir podemos crear arreglos de tipo string, de tipo =
+Integer=20
+etc,,, pero sin duda que lo mas importante y de mas utilidad a la hora =
+de=20
+programar es la utilizaci=F3n de datos definidos por nosotros mediante =
+una=20
+estructura Type</P>
+<P>Por ejemplo:</P><PRE class=3DtablaCodigo>Option Explicit
+
+
+<SPAN class=3DS1>' Estructura de dato para el vector</SPAN>
+Private Type agenda
+
+    nombre As String
+    apellido As String
+    cpostal As Integer
+
+End Type
+
+<SPAN class=3DS1>' Declaramos el vector</SPAN>
+Dim personas(1 To 3) As agenda
+
+
+Private Sub Form_Load()
+
+
+    <SPAN class=3DS1>' Llenamos con datos para el elemento 1 del =
+arreglo</SPAN>
+
+    personas(1).nombre =3D "carlos"
+    personas(1).apellido =3D "Mart=EDnez"
+    personas(1).cpostal =3D 1900
+
+    <SPAN class=3DS1>' Llenamos con datos para el elemento 2 del =
+arreglo</SPAN>
+
+    personas(2).nombre =3D "H=E9ctor"
+    personas(2).apellido =3D "rosales"
+    personas(2).cpostal =3D 1898
+
+    <SPAN class=3DS1>' Llenamos con datos para el elemento 3 del =
+arreglo</SPAN>
+
+    personas(3).nombre =3D "Albert"
+    personas(3).apellido =3D "Einstein"
+    personas(3).cpostal =3D 1324
+
+End Sub&nbsp;
+</PRE>
+<P>&nbsp;</P>
+<P>Para utilizar una estructura definida por nosotros en vectores o =
+matrices, se=20
+hace de la forma habitual, con la diferencia que debemos declarar el =
+arreglo=20
+utilizando el tipo de dato Type que hayamos creado, en este caso Dim =
+personas(1=20
+to 3) as agenda</P>
+<P>&nbsp;</P>
+<HR>
+
+<H2><A id=3Dmatrices name=3Dmatrices></A>2 - Las matrices</H2>
+<P class=3DTitulochico>&nbsp;</P>
+<P>Como se dijo anteriormente, las matrices son arreglos de mas de 1 =
+dimensi=F3n=20
+(2 o mas), a diferencia de los vectores que poseen una sola dimensi=F3n. =
+</P>
+<P>Podemos imaginar una matriz bidimensional ( 2 dimensiones) , como una =
+
+cuadr=EDcula con filas y columnas, donde las filas representar=EDan las =
+coordenadas=20
+x y las columnas las coordenadas y. </P>
+<P>A una matriz de 3 dimensiones o tridimensional se la puede imaginar =
+con las=20
+coordenadas x, y, z, y esta es ideal para representar figuras en el =
+espacio por=20
+ejemplo.</P>
+<P>Las matrices se declaran en el c=F3digo de manera igual que los =
+vectores, con=20
+la diferencia que debemos<STRONG> indicar mas sub=EDndices de acuerdo a =
+la=20
+cantidad de dimensiones que posea la matriz</STRONG>. </P>
+<P>por lo general no se suele utilizar matrices de mas de 3 =
+dimensiones..</P>
+<P>&nbsp;</P>
+<H2><A id=3Dmatriz-dos-dimensiones name=3Dmatriz-dos-dimensiones></A>2.1 =
+- Ejemplo=20
+de matriz de 2 dimensiones</H2>
+<P>&nbsp;</P>
+<P>Matriz bidimensionales de 6 x 8 (de 2 dimensiones).</P>
+<P class=3DtablaCodigo>Dim personas (1 to 6, 1 to 8) as string</P>
+<P>&nbsp;</P>
+<P>Si luego quisiera acceder a los datos de la misma basta con =
+referirnos a los=20
+sub=EDndices</P>
+<P>Por ejemplo:</P>
+<P class=3DtablaCodigo>personas (1, 1) =3D "Natalia"<BR>personas (2, 1) =
+=3D=20
+"pedro"<BR>personas (1, 7) =3D "valeria"<BR>personas (1, 8) =3D =
+"jos=E9"<BR>personas=20
+(2, 2) =3D "carolina"<BR>personas (4, 1) =3D "raquel"<BR>personas (6, 2) =
+=3D=20
+"eustaquio"<BR>personas (6, 5) =3D "maria"<BR>personas (6, 8) =3D =
+"mariana"</P>
+<P>&nbsp;</P>
+<P>El total de =EDndices posibles para almacenar datos o valores en el =
+ejemplo=20
+anterior es de 48 datos, ya que si multiplicamos 6 x 8 nos da como total =
+48=20
+valores posibles para utilizar en la matriz bidimensional.</P>
+<P>&nbsp;</P>
+<P>En este ejemplo creamos una matriz de 3 dimensiones de 3 x 3 x 3</P>
+<P class=3DtablaCodigo>Dim cubo (1 to 3, 1 to 3, 1 to 3) as integer</P>
+<P>&nbsp;</P>
+<P>para acceder a los datos ser=EDa exactamente de la misma manera pero =
+debemos=20
+utilizar un =EDndice mas. </P>
+<P>Ejemplo:</P>
+<P class=3DtablaCodigo>cubo (1, 1 , 1) =3D 50<BR>cubo (1, 1 , 2) =3D =
+50<BR>cubo (1, 1=20
+, 3) =3D 50<BR>cubo (1, 2 , 1) =3D 50<BR>cubo (1, 2 , 2) =3D 50<BR>cubo =
+(1, 2 , 3) =3D=20
+50<BR>cubo (1, 3 , 1) =3D 50<BR>cubo (1, 3 , 2) =3D 50<BR>cubo (1, 3 , =
+3) =3D=20
+50<BR>cubo (2, 1 , 1) =3D 50<BR>cubo (2, 1 , 2) =3D 50<BR>cubo (2, 1 , =
+3) =3D=20
+50<BR>cubo (2, 2 , 1) =3D 50<BR>cubo (2, 2 , 2) =3D 50<BR>cubo (2, 2 , =
+3) =3D=20
+50<BR>cubo (2, 3 , 1) =3D 50<BR>cubo (2, 3 , 2) =3D 50<BR>cubo (2, 3 , =
+3) =3D=20
+50<BR>cubo (3, 1 , 1) =3D 50<BR>cubo (3, 1 , 2) =3D 50<BR>cubo (3, 1 , =
+3) =3D=20
+50<BR>cubo (3, 2 , 1) =3D 50<BR>cubo (3, 2 , 2) =3D 50<BR>cubo (3, 2 , =
+3) =3D=20
+50<BR>cubo (3, 3 , 1) =3D 50<BR>cubo (3, 3 , 2) =3D 50<BR>cubo (3, 3 , =
+3) =3D 50</P>
+<P>&nbsp;</P>
+<P>En el ejemplo anterior, que es un poco extenso, es para que veas =
+todos los=20
+posibles valores que puedes almacenar en una matriz de 3 x 3 x 3, y que =
+da como=20
+resultado un arreglo de 27 valores posibles.</P>
+<P>&nbsp;</P>
+<HR>
+
+<H2><A id=3Dvectores-dinamicos name=3Dvectores-dinamicos></A>3 - =
+Vectores=20
+din=E1micos</H2>
+<P><BR>Hasta ahora hab=EDamos visto solo vectores o arreglos de tama=F1o =
+fijo, =BF=20
+pero qu=E9 pasa cuando no sabemos el tama=F1o o el largo de un vector y =
+queremos que=20
+sea variable ?.</P>
+<P>Visual basic posee una sentencia o funci=F3n que nos permite cambiar =
+el largo=20
+de un vector en tiempo de ejecuci=F3n, d=E1ndonos as=ED mas =
+flexibilidad, y de esta=20
+manera no desperdiciar memoria y recursos de la pc creando vectores mas =
+largos=20
+de lo que realmente necesitamos. </P>
+<P>Esta funci=F3n se llama <STRONG>ReDim</STRONG> y <STRONG>ReDim=20
+Preserve</STRONG> , y un ejemplo de como aplicarla ser=EDa de la =
+siguiente=20
+manera:</P>
+<P>&nbsp;</P>
+<H2><A id=3Dejemplo-vectores-dinamicos =
+name=3Dejemplo-vectores-dinamicos></A>3.1 -=20
+Ejemplo de vectores y arreglos din=E1micos</H2>
+<P>&nbsp;</P>
+<P>En lo siguiente, primero declaramos un vector de la forma como lo =
+hacemos=20
+siempre con la diferencia de que en vez de colocar un tama=F1o =
+declaramos el=20
+vector solo con los par=E9ntesis :</P>
+<P class=3DtablaCodigo>Dim alumnos () as string</P>
+<P>&nbsp;</P>
+<P>Ahora le establecemos un tama=F1o, por ejemplo de 4 elementos y le =
+agregamos=20
+valores:</P>
+<P class=3DtablaCodigo>ReDim alumnos(1 To 4) As String<BR><BR>alumnos(1) =
+=3D=20
+"Luciano"<BR>alumnos(2) =3D "Esteban"<BR>alumnos(3) =3D =
+"Mariano"<BR>alumnos(4) =3D=20
+"Pedro"</P>
+<P>&nbsp;</P>
+<P>Ahora para redimensionar el tama=F1o del vector por ejemplo a 7 =
+elementos,=20
+utilizamos la funci=F3n ReDim Preserve, para preservar los 4 valores =
+anteriores y=20
+le agregamos 3 valores mas:</P>
+<P class=3DtablaCodigo>ReDim Preserve alumnos(1 To 7)<BR><BR>alumnos(5) =
+=3D=20
+"Karina"<BR>alumnos(6) =3D "Ra=FAl"<BR>alumnos(7) =3D "Romina"</P>
+<P>&nbsp;</P>
+<P><STRONG>Nota</STRONG>: si utilizamos la sentencia ReDim, o mejor =
+dicho si=20
+redimensionamos el vector sin utilizar la sentencia ReDim preserve, los =
+valores=20
+que conten=EDa el vector anteriormente se perder=E1n</P>
+<P class=3DTitulochico>Eliminar o vaciar un vector</P>
+<P>Para eliminar un array, arreglo o vector, podemos utilizar Erase, por =
+
+ejemplo:</P>
+<P class=3DtablaCodigo>Erase Nombre_Del_Vector</P>
+<P>&nbsp;</P>
+<H2><A id=3Dlbound-ubound name=3Dlbound-ubound></A>4 - Funciones de VB =
+para trabajar=20
+con Arreglos - LBound y UBound</H2>
+<P>Estas funciones son ideales para trabajar con vectores y matrices que =
+han=20
+sido declaradas din=E1micamente</P>
+<P><STRONG>Lbound</STRONG> y <STRONG>Ubound</STRONG> nos devuelve un =
+n=FAmero de=20
+tipo Long que nos permite saber el <STRONG>l=EDmite superior</STRONG> e=20
+<STRONG>inferior</STRONG> de un <STRONG>vector o una matriz</STRONG>. =
+</P>
+<P>&nbsp;</P>
+<H2><A id=3Dejemplos-lbound-ubound name=3Dejemplos-lbound-ubound></A>4.1 =
+- Ejemplo=20
+de Ubound y Bound</H2><PRE class=3DtablaCodigo>Private Sub Form_Load()
+
+
+    <SPAN class=3DS1>'Variables Para almacenar los l=EDmites superior e =
+inferior</SPAN>
+    Dim LimiteInferior As Long
+    Dim LimiteSuperior As Long
+
+    <SPAN class=3DS1>'Declaramos 3 matrices, de una dimensi=F3n, _
+     de dos dimensiones y de 3</SPAN>
+    Dim UnVector(1 To 520) As Integer
+    Dim UnaMatriz(20, 5 To 100) As String
+    Dim OtraMatriz(10, 20, 30) As Long
+<SPAN class=3DS1>
+    ' Devuelve 1</SPAN>
+    LimiteInferior =3D LBound(UnVector)
+    <SPAN class=3DS1>' Devuelve 520</SPAN>
+    LimiteSuperior =3D UBound(UnVector)
+    <SPAN class=3DS1>' Devuelve 0</SPAN>
+    LimiteInferior =3D LBound(UnaMatriz, 1)
+    <SPAN class=3DS1>' Devuelve 20</SPAN>
+    LimiteSuperior =3D UBound(UnaMatriz, 1)
+    <SPAN class=3DS1>' Devuelve 5</SPAN>
+    LimiteInferior =3D LBound(UnaMatriz, 2)
+    <SPAN class=3DS1>' Devuelve 100</SPAN>
+    LimiteSuperior =3D UBound(UnaMatriz, 2)
+    <SPAN class=3DS1>' Devuelve 0</SPAN>
+    LimiteInferior =3D LBound(OtraMatriz, 1)
+   <SPAN class=3DS1> ' Devuelve 10</SPAN>
+    LimiteSuperior =3D UBound(OtraMatriz, 1)
+    <SPAN class=3DS1>' Devuelve 0</SPAN>
+    LimiteInferior =3D LBound(OtraMatriz, 2)
+    <SPAN class=3DS1>' Devuelve 20</SPAN>
+    LimiteSuperior =3D UBound(OtraMatriz, 2)
+
+   <SPAN class=3DS1> ' Devuelve 0</SPAN>
+    LimiteInferior =3D LBound(OtraMatriz, 3)
+   <SPAN class=3DS1> ' Devuelve 30</SPAN>
+    LimiteSuperior =3D UBound(OtraMatriz, 3)
+
+
+End Sub
+&nbsp;</PRE>
+<P>&nbsp;</P>
+<P>Como habr=E1s visto en los ejemplos anteriores, para conocer los =
+limites=20
+superiores e inferiores en los vectores, solo se debe pasar como =
+par=E1metro a las=20
+funciones <STRONG>Lbound</STRONG> y <STRONG>Ubound</STRONG>, el nombre =
+del=20
+vector con el cual queremos trabajar. </P>
+<P>En cambio en las matrices se a=F1ade un segundo par=E1metro en el =
+cual debemos=20
+indicar el n=FAmero de la dimensi=F3n en la cual queremos recuperar los =
+valores.</P>
+<P>&nbsp;</P>
+<P class=3DTitulochico>Ejemplo 2 de LBound y UBound:</P>
+<P>&nbsp;</P>
+<P>Si deseamos recorrer todos los elementos de un vector o una matriz =
+podemos=20
+hacerlo mediante un bucle For de la siguiente manera:</P><PRE =
+class=3DtablaCodigo>For x =3D LBound(vector) To UBound(vector)
+    MsgBox vector(x)
+Next i&nbsp;</PRE>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<H2><A id=3Djoin-split-filter name=3Djoin-split-filter></A>4.2 - =
+Funci=F3n Join, Split=20
+y Filter :</H2>
+<P class=3DTitulochico>&nbsp;</P>
+<P>Visual basic en su sexta versi=F3n incorpora estas 3 funciones para =
+trabajar=20
+solo con vectores. Estas funciones est=E1n relacionadas con el =
+tratamiento de las=20
+cadenas de caracteres.</P>
+<P class=3DTitulochico><BR>Funci=F3n Join</P>
+<P>Esta funci=F3n se utiliza para unir en una sola variable el conjunto =
+de=20
+subcadenas de un vector. Esta funci=F3n tiene solo 2 par=E1metros y es =
+muy f=E1cil de=20
+usar. Ejemplo:</P>
+<P class=3DtablaCodigo>Dim micadena as string<BR>Dim vector(1 To 3) As=20
+String<BR><BR>vector(1) =3D "Carlos"<BR>vector(2) =3D =
+"Pedro"<BR>vector(3) =3D=20
+"Juan"</P>
+<P>&nbsp;</P>
+<P>Ahora ejecutando <STRONG>Join</STRONG>, la variable =
+<STRONG>micadena</STRONG>=20
+pasar=EDa a valer "Carlos-Pedro-Juan"</P>
+<P class=3DtablaCodigo>micadena =3D join (vector, "-")</P>
+<P>&nbsp;</P>
+<P><STRONG>Nota</STRONG>: En el primer par=E1metro de la funci=F3n =
+debemos indicar=20
+el vector en el cual trabajar, y en el segundo se debe indicar un =
+delimitador de=20
+caracter para separar las cadenas. Si no especificamos ninguno, visual =
+basic=20
+utilizar=E1 por defecto un espacio vac=EDo o en blanco (" ") para =
+separar cada=20
+subcadena .</P>
+<P>&nbsp;</P>
+<P class=3DTitulochico><STRONG>Funci=F3n Split:</STRONG></P>
+<P>Esta funci=F3n hace el trabajo inverso de la <STRONG>funci=F3n =
+Join</STRONG>.</P>
+<P>Split se utiliza para rellenar un vector din=E1mico que contiene un =
+n=FAmero de=20
+subcadenas a partir de una cadena que le pasamos como par=E1metro a la =
+funci=F3n.=20
+</P>
+<P>Para aclarar un poco un ejemplo</P><PRE =
+class=3DtablaCodigo>&nbsp;Private Sub Form_Load()
+
+    <SPAN class=3DS1>'Una variable para almacenar una cadena</SPAN>
+    Dim Micadena As String 'Vector din=E1mico
+    Dim Vector() As String
+
+   <SPAN class=3DS1> 'Le damos un valor a la variable</SPAN>
+    Micadena =3D "maria/natalia/romina"
+
+    <SPAN class=3DS1>'Ejecutamos la funci=F3n Split</SPAN>
+    Vector =3D Split(Micadena, "/")
+
+   <SPAN class=3DS1> 'Ahora el vector din=E1mico pasar=EDa a _
+     contener los siguientes valores:</SPAN>
+
+    Vector(0) =3D "mar=EDa"
+    Vector(1) =3D "natalia"
+    Vector(2) =3D "Romina"
+
+
+End Sub
+</PRE>
+<P>&nbsp;</P>
+<P><STRONG>Nota</STRONG>: una cosa importante es que en el vector =
+anterior no se=20
+ha declarado un rango , ya que la funci=F3n devuelve <STRONG>un vector =
+cuya=20
+cantidad de elementos se ignora</STRONG>, es decir no se conoce.</P>
+<H2 class=3Denlaces-relacionados>Enlaces relacionados a split</H2>
+<P><A=20
+href=3D"http://www.recursosvisualbasic.com.ar/htm/trucos-codigofuente-vis=
+ual-basic/286-pasar-archivo-a-array.htm">Pasar=20
+un archivo de texto a un array o matriz usando split</A></P>
+<P>&nbsp;</P>
+<P class=3DTitulochico>Funci=F3n Filter :</P>
+<P>La funci=F3n Filter se utiliza para filtrar subcadenas de un vector =
+dependiendo=20
+de un determinado criterio de b=FAsqueda. Los par=E1metros que lleva la =
+funci=F3n son=20
+los siguientes:</P>
+<P>Filter (<STRONG>vector donde buscar</STRONG>, <STRONG>cadena a=20
+buscar</STRONG>, <STRONG>valor booleano que indica si incluir o excluir =
+la=20
+cadena</STRONG>)</P>
+<P>Ejemplo:</P><PRE class=3DtablaCodigo>   =20
+    <SPAN class=3DS1>' Vector</SPAN>
+    Dim Alumnos(1 To 4) As String
+
+   <SPAN class=3DS1> ' Vector din=E1mico para almacenar el =
+resultado</SPAN>
+    Dim Resultado() As String
+
+    Alumnos(1) =3D "Luciano"
+    Alumnos(2) =3D "Lucas"
+    Alumnos(3) =3D "juan"
+    Alumnos(4) =3D "Natalia"
+
+    <SPAN class=3DS1>' Ejecutamos Filter</SPAN>
+
+    Resultado =3D Filter(Alumnos, "Lu", True)
+
+    <SPAN class=3DS1>' Ahora el vector din=E1mico "resultado" pasa a =
+contener</SPAN>
+
+    MsgBox Resultado(0), vbInformation ' Luciano
+    MsgBox Resultado(1), vbInformation ' Lucas
+   =20
+&nbsp;</PRE>
+<P>&nbsp;</P>
+<HR>
+
+<P>&nbsp;</P>
+<H2><A id=3Darreglo-de-controles name=3Darreglo-de-controles></A>5 - =
+Arreglos de=20
+controles en visual basic </H2>
+<P><BR><BR>Hasta ac=E1 se vi=F3 los aspectos de los vectores y matrices =
+como=20
+estructuras que nos permiten almacenar datos y resolver problemas =
+l=F3gicos en=20
+nuestros programas. Ahora veremos los <STRONG>Arreglos de controles o =
+vectores=20
+de controles</STRONG></P>
+<P>Un arreglo de controles es un conjunto de controles, todos de la =
+misma clase=20
+(todos TextBox, todos Label, etc...) que poseen un mismo nombre y cada =
+uno posee=20
+un n=FAmero de =EDndice que los identifica y los hace =FAnicos con =
+respecto a los=20
+dem=E1s, y conformando entonces un vector de controles. por ejemplo en =
+vez de=20
+tener 3 Command, llamados command1, command2 y command3, puedo crear un =
+arreglo=20
+de 3 botones. Estos 3 botones comparten el mismo nombre pero cada =
+bot=F3n se=20
+distingue del resto por un n=FAmero de =EDndice, es decir si por ejemplo =
+nuestro=20
+bot=F3n de comando se llama cmd pasar=EDa a tener un cmd(1), un cmd (2) =
+y un=20
+cmd(3).</P>
+<P>En un arreglo de controles todos los controles deben ser del mismo =
+tipo y=20
+adem=E1s no puede haber un control dentro del arreglo que tenga el =
+<STRONG>mismo=20
+n=FAmero de =EDndice</STRONG>, ya que ser=EDa imposible identificarlo en =
+el conjunto,=20
+adem=E1s VB no lo permitir=EDa y nos mostrar=EDa un error.</P>
+<P>Las ventajas principales que tenemos cuando trabajamos con un =
+<STRONG>vector=20
+de controles</STRONG> son las siguientes:</P>
+<OL>
+  <LI>Todos los controles que forman el arreglo comparten el mismo =
+procedimiento=20
+  de c=F3digo, con lo cual si tenemos muchos controles que tienen que =
+ejecutar la=20
+  misma instrucci=F3n no debemos escribir c=F3digo de m=E1s en cada =
+control.=20
+  <LI>Tener 20 cajas de texto, por ejemplo, consumen mucha mas memoria =
+que=20
+  utilizar un vector de 20 cajas de texto.=20
+  <LI>Es posible crear controles en tiempo de ejecuci=F3n, a partir de =
+un arreglo=20
+  de controles ya creado.=20
+  <LI>Es mas f=E1cil manipular y establecer las propiedades en un vector =
+de=20
+  controles refiriendonos al sub=EDndice de los mismos. </LI></OL>
+<P>&nbsp;</P>
+<H2><A id=3Dcrear-arreglo-de-controles =
+name=3Dcrear-arreglo-de-controles></A>5.1 -=20
+Ejemplo para crear un arreglo de controles</H2>
+<P>Para crear un arreglo de controles podemos hacerlo de 2 maneras.</P>
+<P>La primera opci=F3n es copiar un control ya dibujado y pegarlo en el=20
+formulario. Luego visual basic nos mostrar=E1 un di=E1logo =
+pregunt=E1ndonos si=20
+queremos <STRONG>crear una matriz de controles</STRONG>. Al contestar =
+que si, ya=20
+se ha creado un arreglo con 2 controles, en este caso el primer control =
+tendr=E1=20
+el =EDndice 0 y el que pegamos el =EDndice 1. Si queremos seguir =
+agregando mas=20
+controles cuando peguemos nuevamente otro control visual basic =
+<STRONG>no nos=20
+preguntar=E1</STRONG> nuevamente si deseamos crear una matriz del =
+control ya que=20
+<STRONG>esta ya est=E1 creada</STRONG>, y por lo tanto agregar=E1 un =
+nuevo control y=20
+le agregar=E1 el <STRONG>n=FAmero de =EDndice correspondiente para =
+diferenciarlo del=20
+resto</STRONG>, en este caso el 2. Ahora si observas en la =
+<STRONG>propiedad=20
+index de los controles</STRONG> que forman el arreglo ver=E1s que estos =
+tienen un=20
+n=FAmero de =EDndice que antes no ten=EDan al no formar parte de un =
+arreglo de=20
+controles</P>
+<P><STRONG>Nota</STRONG>: cualquier control de visual basic que no tenga =
+un=20
+arreglo creado, la propiedad index de los mismos no tendr=E1 ning=FAn =
+n=FAmero o=20
+valor, ya que esta propiedad est=E1 reservada para los controles que =
+formen parte=20
+de un vector o arreglo.</P>
+<P>La otra opci=F3n para crear un arreglo, es <STRONG>ingresar =
+directamente el=20
+n=FAmero de =EDndice</STRONG> en la <STRONG>propiedad index</STRONG> del =
+control del=20
+cual queremos crear un arreglo.</P>
+<P>&nbsp;</P>
+<P class=3DTitulochico>Ejemplo:</P>
+<P><BR>El ejemplo consiste en crear <STRONG>10 Arreglos de =
+TextBox</STRONG> y lo=20
+que se va a hacer es mediante un bucle poner la propiedad =
+<STRONG>Enabled de los=20
+controles en False</STRONG>, es decir los vamos a deshabilitar a =
+todos.</P>
+<P>Como te dar=E1s cuenta, si tuvieses que hacer esto manualmente, es =
+decir=20
+deshabilitar cada TextBox individualmente tendr=EDas que escribir </P>
+<P>text1.enabled =3D False</P>
+<P>y as=ED para cada uno de los controles. en cambio haciendo un arreglo =
+de=20
+controles, recorremos mediante un For todos los controles refiriendonos =
+al=20
+=EDndice y estableci=E9ndole la propiedad Enabled en False para =
+deshabilitarlos.</P>
+<P>Create un arreglo de 10 TextBox Para eso coloca un text1 en el =
+formulario.=20
+despu=E9s copialo y pegalo, vb te va a preguntar=E1 si quer=E9s hacer un =
+arreglo,=20
+decile que si, hasta que tengas 10 o los que quieras.</P>
+<P>Si te fij=E1s ahora en la <STRONG>ventana de propiedades</STRONG>, =
+cuando=20
+seleccionas un textBox en la propiedad index te vas a dar cuenta que =
+poseen un=20
+n=FAmero, ese es el =EDndice que los identifica, y por medio de ese =
+=EDndice nos vamos=20
+a referir en el bucle For</P>
+<P>El c=F3digo de este ejemplo bien simple quedar=EDa as=ED:</P>
+<P class=3DtablaCodigo>Dim i As Integer<BR><BR>For i =3D 0 To=20
+9<BR><BR>text1(i).Enabled =3D False<BR><BR>Next</P>
+<P>&nbsp;</P>
+<P>Como pod=E9s ver, le pasamos en el par=E1metro =EDndice el valor de =
+la variable i=20
+para referirnos a ese text1 en particular y asignarle la propiedad =
+Enabled en=20
+False</P>
+<P>&nbsp;</P>
+<H2><A id=3Darreglo-de-controles-en-parametro=20
+name=3Darreglo-de-controles-en-parametro></A>5.2 - Pasar un arreglo de =
+controles=20
+como par=E1metro</H2>
+<P>Una tarea habitual es la de poder pasar un arreglo o vector de =
+controles como=20
+par=E1metro a una Sub o function.</P>
+<P>Por ejemplo supongamos que tenemos un programa que tiene muchos =
+formularios.=20
+y varios de esos formularios tienen una funci=F3n que se encarga de =
+limpiar todas=20
+los textBox y eliminar el contenido de los mismos</P>
+<P>Para solucionar esto, y no tener que repetir c=F3digo, podr=EDamos =
+crear en un=20
+m=F3dulo de c=F3digo, una SubRutina para que la puedan utilizar y =
+acceder desde=20
+todos los formularios.</P>
+<P>Para poder pasar un vector como par=E1metro a una rutina, la variable =
+o=20
+argumento en la Subrutina, debe estar declarada como de tipo Object</P>
+<P class=3DTitulochico>Ejemplo</P>
+<P>Colocar en un formulario un arreglo de textBox, por ejemplo =
+TextBox1(0),=20
+TextBox1(1) y TextBox1(2)</P>
+<P>Colocar un CommandButton para limpiar el contenido de las cajas de =
+texto</P>
+<P>&nbsp;</P>
+<P class=3DTitulochico>C=F3digo fuente en el formulario</P><PRE =
+class=3DtablaCodigo>Option Explicit
+
+Private Sub Command1_Click()
+    Call Limpiar_TextBox(Text1)
+End Sub
+
+
+<SPAN class=3DS1>' Recibe el vector como par=E1metro</SPAN>
+Sub Limpiar_TextBox(El_TextBox As Object)
+
+    Dim i As Integer
+   =20
+    For i =3D 0 To El_TextBox.Count - 1
+        El_TextBox(i).Text =3D vbNullString
+    Next
+
+End Sub
+
+&nbsp;</PRE>
+<P>&nbsp;</P>
+<HR>
+
+<P><A=20
+href=3D"http://www.recursosvisualbasic.com.ar/htm/tutoriales/tutorial_vis=
+ual_basic_menu.htm">Volver=20
+al men=FA del tutorial</A></P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P><!-- InstanceEndEditable -->
+<P>&nbsp;</P>
+<HR>
+
+<P class=3Dheader-buscar>Buscar en Recursos vb</P><!-- Google CSE Search =
+Box Begins  -->
+<FORM id=3Dsearchbox_006154211409403389812:rsvroqctr3c=20
+action=3Dhttp://www.recursosvisualbasic.com.ar/htm/menu-principal/buscar.=
+htm><INPUT=20
+type=3Dhidden value=3D006154211409403389812:rsvroqctr3c name=3Dcx> =
+<INPUT type=3Dhidden=20
+value=3DFORID:11 name=3Dcof> <INPUT size=3D40 name=3Dq> <INPUT =
+type=3Dsubmit value=3DBuscar name=3Dsa> </FORM>
+<SCRIPT=20
+src=3D"http://www.google.com/coop/cse/brand?form=3Dsearchbox_006154211409=
+403389812%3Arsvroqctr3c&amp;lang=3Des"=20
+type=3Dtext/javascript></SCRIPT>
+<!-- Google CSE Search Box Begins  -->
+<SCRIPT type=3Dtext/javascript><!--=0A=
+google_ad_client =3D "pub-9569018236517885";=0A=
+/* 234x60 */=0A=
+google_ad_slot =3D "5394497145";=0A=
+google_ad_width =3D 234;=0A=
+google_ad_height =3D 60;=0A=
+//-->=0A=
+</SCRIPT>
+
+<SCRIPT src=3D"http://pagead2.googlesyndication.com/pagead/show_ads.js"=20
+type=3Dtext/javascript>=0A=
+</SCRIPT>
+
+<HR>
+
+<P class=3Dcopyright><A =
+href=3D"http://www.recursosvisualbasic.com.ar/">Recursos=20
+visual basic</A> - <A=20
+href=3D"http://www.recursosvisualbasic.com.ar/htm/menu-principal/buscar.h=
+tm">Buscar</A>=20
+- <A=20
+href=3D"http://www.recursosvisualbasic.com.ar/htm/menu-principal/privacid=
+ad.htm"=20
+rel=3Dnofollow>Privacidad</A> - Copyright =A9 2005 - 2009 -=20
+www.recursosvisualbasic.com.ar</P></DIV></DIV>
+<DIV id=3Dsuperior>
+<UL><A title=3D"Ir a la p=E1gina principal de Recursos Visual basic"=20
+  href=3D"http://www.recursosvisualbasic.com.ar/"><IMG height=3D45=20
+  alt=3D"Logo de Recursos vb"=20
+  =
+src=3D"http://www.recursosvisualbasic.com.ar/imagenes/logo-vb-chico-2.gif=
+"=20
+  width=3D200 align=3DabsMiddle border=3D0></A>=20
+  <LI><A class=3Dnav title=3D"Ir a la p=E1gina principal de Recursos =
+Visual basic"=20
+  =
+href=3D"http://www.recursosvisualbasic.com.ar/"><SPAN>Inicio</SPAN></A>=20
+  <LI><A class=3Dnav=20
+  title=3D"Secci=F3n de Trucos, ejemplos y rutinas en Visual basic en =
+general"=20
+  =
+href=3D"http://www.recursosvisualbasic.com.ar/htm/trucos-codigofuente-vis=
+ual-basic/listadodecodigosvisualbasic.htm"><SPAN>Ejemplos=20
+  vb </SPAN></A>
+  <LI><A class=3Dnav=20
+  title=3D"Ir a secci=F3n de Ocx - Activex - Dll, complementos, =
+m=F3dulos y m=F3dulos de clase"=20
+  =
+href=3D"http://www.recursosvisualbasic.com.ar/htm/menu-principal/Ocx-dll.=
+htm"><SPAN>Ocx=20
+  - Activex</SPAN></A>=20
+  <LI><A class=3Dnav=20
+  title=3D"Secci=F3n con ejemplos del Api de windows para Visual basic"=20
+  =
+href=3D"http://www.recursosvisualbasic.com.ar/htm/listado-api/Listado-api=
+.htm"><SPAN>Api=20
+  vb</SPAN></A>=20
+  <LI><A class=3Dnav title=3D"Secci=F3n de art=EDculos, Tutoriales, =
+Manuales y gu=EDas"=20
+  =
+href=3D"http://www.recursosvisualbasic.com.ar/htm/menu-principal/manuales=
+-articulos-tutorial.htm"><SPAN>Tutoriales=20
+  - Manuales</SPAN></A>=20
+  <LI><A class=3Dnav title=3D"C=F3digo fuente, programas y utilidades =
+para descargar"=20
+  =
+href=3D"http://www.recursosvisualbasic.com.ar/htm/menu-principal/mis_util=
+idades.htm"><SPAN>C=F3digo=20
+  fuente</SPAN></A>=20
+  <LI><A class=3Dnav title=3D"Ir al listado de ejemplos de visual =
+basic.net"=20
+  =
+href=3D"http://www.recursosvisualbasic.com.ar/htm/vb-net/listado-1.htm">E=
+jemplos=20
+  vb.net</A> </LI></UL></DIV>
+<SCRIPT =
+class=3Djavascript>dp.SyntaxHighlighter.HighlightAll('t');</SCRIPT>
+<!-- InstanceEnd --></BODY></HTML>
+
+------=_NextPart_000_0000_01CB8712.38374B20
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.recursosvisualbasic.com.ar/imagenes/logo-vb-chico-2.gif
+
+R0lGODlhyAAtAPcAAAAAABNgkwhyLKampg0nOAKS8kpKSnCGlAAPHQ5Ibuf2/1p7kgIqUiBJZElk
+gENtk7vk/4ajuy9kSR8+NkFZagYaKQh7yEpicgAGChmNRhmi/gMpQ158jxpBWgBNgBBUSk5ZYThL
+WTtKU7rO3V6MsTd8sXuTqkKDtRkZGQAYMTo6Oomx0TJWejNmmeDu+TRIVD1jfBc0UhmESgkOESkp
+KSJDWFpteylKbBhWWg4TFydafajH3Tat/VpaWtXe5gxsrEFcZBE4UQSD11NodiRZO////xRxQJmZ
+mQAeO5emtDE6QTd1UxkwR3F+iDGZSQ4hLCJbh8zMzFl6mwgICCIxOhCe/USHvJrO8aq7zFF6nWSX
+vSFCYyo6REtriyGFMzlZcgB0wJy91ggYISlPdD1kiykzOSB7tjaGu3eMojR8TzFLXRWWXBAXGyAq
+MYWasFJSUgYvWQ8rRDRaTwlWiR8hIjtlWxGDOzpTYyhMQCNJbnFxcRBCZA84YUhcanymxyqSQWRx
+eyBhltbv/ymp/w+L3X9/f+Hm66SzwrjE0XebuzBEUmZmZkJCQgAhRGt6hDGES2aAmwCZ/wggMSxw
+pGR8lVCTxitIWzJehrrU6GyUtZWpviJ8Nk5xklRsfSBtoDMzMwx7MSxYc8jT3RAQEMPm/itkiwAI
+ECJ0Oho6W1SDqjphhYSUpRhlTRo5SyNqYBpWggYSGgRkpIytxnqLlQcqShsnMyk8SQcLDqCzxhAa
+IbK9yEF2YBGCzQAACBkiKQU5XCtSaxlDZ+74/szj8kNPViFRcSt9RDtbe2aZzCqO0pbC4UFqjlpy
+iRuFzEtgbTtDSxV0szBBS42drW2Kp0FUYhNMeUKl5058pGZmZlJ0jGx+ixST5j1vmBhPTzFRck1T
+VwQuVGR2gxpMbD1QWwOK42WClUt1mhIhL1mGqUmFtSEzP6bV9X2t0UFJT2WEoyGm/zRyUd3x/19r
+c5a1z5uuwTRRZA5sOwohOUJjhBo6UFJlc0xshPDw8HODjQ8ySf///yH5BAUUAP8ALAAAAADIAC0A
+AAj/AAEIHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNq3Mixo8ePIEOKTMhIj55FbwyoXKmSESMV
+NFCMnEmz5khGAwYUQsmSpUsVMFHcskn0Ya+jSJMqXYqhqdOnUKNKnUpVKkM9OkN1CMK1q9cgvujQ
+QTFqStGMVdOqXVv11i2nbuG+bRqX7lwMdfHezZv36UE9hYBFGky4cGFyc2BNmTKKBiMDb1K2fPmJ
+zkAVPTJL7rnyZ+VRB0uiZEQDwKc3mQ1Q/gS5xxtGldksnuLWLaNFi3p82/1N9UsatVXg1g07Zu3j
+yJO7ncG8ufPn0KNLf4589uyCmTsY3m5YyGI6qDV3/37puUehna45s8xcPIdBnAP0pDew6GQP1a1z
+uy6OYsZxA4UcMYt9vH3TzoEHYnbeSQbCREcO0z2Xw4QUVmjhhRhmqCGF1FlHUGRBDAbDfavRYCId
+TPww2B4osGZAGV9xxQQNrPUwnBJbxdhVB0B1cE5ZBmFVyAsdfMIIai+iEkQrRqpWRgcd8OEPCjmY
+YuUM39CTxCyLqLHHl3ts8WUtSjwjgjPynKREMGwGk0susEwIy5xy0pnDnLCwwQaeb4rhZ59/5uKn
+GIASKmiggxZaqJ54wtKcXwKpFGIkMDAi1lgoZDrKplMMFgBQ1QjB3WAF/FCGSsWQM6phXA12z1+F
+1P8zWByfPBOAqoTRUEYABRiWSw4IBPvNIUn048k2VRBWRbKDbfOKOi+IUMo2ylbxC6LYGprom2/6
+4gu33j4hbrjj+iLuE+Sia26553rLLaBxQjiDlVNgMJBLkwJjGWOjZIoCHSaOMpgnjKi4KmFC0LDH
+wYYRsMFgQZiFXQ/aRRIEDRYYRg4dYGxXQBu5VBDsLIf0Q0gky1ZbbQC1BKCBBoS9jEoFFXhLc82+
+3Gwzzem20cY5QPsM9DlCB/2z0UMXTfTRS7ebcwWGzmlKXPcyMmkDKDCGgomfqHAkI74MbMtgzXyh
+xCdoo22LOBlbrGIBl3iW9icnCvVwJB2AVhCIg6H/wsRgvFDwm8CRNNPOM8QQ80wZZTwDQhPSSMPN
+y8mYAwIIxIjwTDRK6EDIy1Q0o8E24xBzOQjRUFGGEqyXUcvrr/ss++xtUGG77YznrvvuvPfO+O23
+z+7tt79C6FbVk/4whwcezOH8HAFE/0OvkVgyKQwq+Ks9CpN20DEvKly6vaZl3b2Fe3u/0f2k+Fja
+X6eRQLP46qwrQYw+4czSzyQvy4N6NNHgggC5oA5PvCwazXhHMsbBQBGIIIAAdGDqqPCN01nwgpgT
+gRIGyMEOepCDpgOBCD7YQdv5bHjFO55A8MWwwhSgGnTwx2CUx7wa1jAWgwFGxnhhGYX0ixaDyZtB
+/zKDisE0YFJf6CFeOoYyXljgic1ohhB+EAB92MBgfVAEErZou3vEIQ6eeEckavCDd7yjCrzgRTKS
+kUZemKEUHfBHHIghjwvYUR51vKM8hsBHQABiCJZoBQBbQchBFjIahBQkIgmpD0B0og+KTKQhWyHA
+LxLAZzSL07yQx50CWKCNvIDGK9qQKSC2cDCh2KFMFGIAFXRPbwQphB4qdkRU9nAKMxBDxlI2mJcR
+xgwhwGEkgKCIDRhTHerYwBeAMYkzNqABZxjEsqowCGkuq5qEQIU/qJHHC/iRj0PwYyfG6QhHjLMG
+DqyBOtO5ThGoE53uVKc8zHkBeL7TgfnIpyKiwf+EL1KhDZKoAJ5MwUlKlUJUgxFCApRAGvKhwJSE
+AKVEn2gBKnTMAlnLAQ28th7ALKJiQQDNLejACPMcoRBbyGG+esgGGrAuH1DwxA9mWoIS/EBV7wiF
+MKmhCFoEoQH4y4I7OFECaQKjAX3oxCTMYIYTnICpZkgGD6rgCVSAABAOcEAQFKEIruQjBCGAkiXm
+yQxmfMEZWLVEDRj4TraqcxzUyOodAOEIZozTj1l1gB8v8IV6hEARrfCHP5AZ0AqwoUoFxR4dtmCw
+SBTAE+ogi9ZMCYWgjE9TU+iYEMqyNRX0xEbyAelQGlNSj1ZMK4O5wSpp8A3/laENZRAgAKOhCB3/
+mHEZJTDjHbgagqSG4wBo0EY0BzEEZ1DjuMhNLjV4wIMTUKMP4YjuC14A1uoy8LpNyK48stsER/RB
+ucrtgyOy60fumve85QTEOF4AQC78010QKmgo6KC1llEvEryoxqZGkQPC/CABxiSAUAwizFj8ghY+
+jVEHGvCJWgyGHADegD+4AqVX4KoeRYyEagWCmQtoBUpsEkcxiqGDZlSTE5Oo5iAmoQMdXOISZCAD
+N4ZrDT7GWBU4zjGOz8DcdFDAGeV0BFivC1fl9uPINrDBkfvh3T58FwhQjrIjjtwE6C75ylc2rw3+
+GkBk1uJb8eWwCmQYiWP0EABuGUUCEOpY/U4h/wHcscQqCZKC+zKsAXQQJsN+QAdT6muFBqBeFWA2
+GDMSJhkU2EPGqkkYRg+mmoEQBy+YO03mamBZltZBMPThiGxkowMMbNNxn9mAIfSDAxyAAXRRzQFH
+OAMYsHYyrPdx5AWEAhhT5sA+gCHrWPfhC2XNLpSCYAtbECCguWADQQViIgIMph5zHghjgmCwH4Bm
+FEEAw30LwIWhGEQMsWDzquoxlgb8QNyF4cUrsnaPwahhlS5B6KAJY2hCQOMLlvjFHgKQjEE02t+R
+2EYl9vElaFAa0zx4mQasUYlSiCMYQ9CGp7OhDYl7utYLWMAsZoHqUDjDGdlA9SzCAWtgfBwY+//g
+wMZhAGttcDwbJn81rE8OgwUcedgBJAABKvCmZQOAfDSgL0IYA7CsCeQW/aID2oQ+9H5xbW5oAwpw
++PUvgNnimYqgm9EbUxmJ6UpQ54iGCCxhCaReoBji2IMaLAGOX/yiHvVIgDjEcYEhtLgYFLgDH/gQ
+DDu2+BJJznEnLvBwiFs8G0f29AIOcICMa3wWC2BBKPTh4WyUY+WwpjwMRE5yWPfj5ZO/QMntWIya
+3xxKOd95sn3OKcZILCGcMki/jL6QTV3WX68XyH63l/vYAwADOUCBnnxBBS4AkLp3uAPZl898uNeD
+AtCnQD3UQH013AH6zrCj9u0Y/eRHvOIVvzL/+CseDhts345D2PjGh4B+9Tti+y6fhTbOv30lH5ka
+YFWELdTRBm8d9iw20RTMkQO54Auvg0zFZguKwHwMyHzVpwbOVw/JN4EUWIF3YGpIpg1Ypg020AfZ
+R392ZAPq1w/6oA8HsHH9cH7xN38g6E2M1w/491f7pw7+hz4ASBO1ESwGuEUbUGzg8INk53a/EIRu
+R4S/QH1gknxtooRswoQQ1w+eFgwUMAQTx3gZhw8lGApaeAH6oIWhAAizUA7lgHhhaGtc6IUuVw5m
+2IVb6GH4YHP90ABQon9xcA88lwsIcIM1kYMIsINI0IO28IPgYISEmG9uh4Rf4oTQ1yaLyCZK/+Zp
+4gB94hAK+2CFGSd/MKCFWaiJ2iCGlwd5xzB5bBgKaSiG/RAO+5CK0dUFGXcAjiCHHUCHdvgmeaiH
+M8GHfgiIgliIQmiEiLgHikgBjCiMjgiF2RCJFDB34oA/jrdxC7APouiFJZgNlEAJK6eJozgEB1CN
+1jgL3OiMGdcPzhAMc2gLGzCLeMgQ7UAJUvAFtZAQ7XAA0wAJWUUGl+AN72gTz0AJ08AMz7APWRCQ
+ApkKBFmQ18AN+NaADPiAEWiBd1AOiZAIJJANeXeBRxYO0ZeRH6dk6hcOLagPnzcLgNCCXBgOIal+
+KOmKF0ABMah/yFSDC9EOuKAJ7oAPY1ABB//RDlhADyYACZAgBfiAY5eQjzPRDpqgCSaQlNMgBUxp
+DuYwkAWZCubADcCgkA7IkHBngeUQBmHgB5lAAvswgdyXkRr5ceD0gS1YfiR5fknWlkk2BE7WB3kX
+Ai/gkjToC/+nEJSgCYcgCmgQDHBQiwSxCliABtIgCibQBUmQDWPAAizwYi+2BecwEO1QDu7wADcw
+mQQRj5eZmZspj1LACctwDM+wCvRADz5wCJyAC6IgCiMwAjvwmsowmyMgC5MQAHNwCYb4C9mQCJVg
+BSWQCtfwCm6XDZnwm1ZAAiQwCa8AjBHADsjADiSQCpMwCSWgBVpgBdqJnVZwAiVwDfswYq7/8HFa
+6Aq7sAte6Ay74Aoz5wyhwJ7k6Qrm6WFaeJ7p6QyuMGLQhwOs8AHRYI7o6HMIIQXuYAJFwA/HAA4M
+IJjPEAG4IA0HUARFwAyHIKHBwAI45pgsMAbBgJM6SQ/T0AVjsAdiQJlYgAto0AUskAc4CQAyiZQL
+0AUy6g4R4Ab0UASi4A2iIKHCoADx0KOkEKTxEA/rUAJzUArA8IOlwJWV4J3ogA41ZQV+4Ae/eQIk
+gA7V+Qp34AfIsA7rMALXcALdmQmZ4FQnQKZOFZzXEAoykAG78Gpt6gROwJ6uIKcZkAHAcAG7IAMy
+4Ap25Ap36gSPAAyAKqcyAGu7kAYZ4Ap5/0ABS2AHkHoKXKBzdyigB3EMIooIReADcMAACyoQaKAJ
+bgAJ/FAEmlADDiAKbnADx3AMwZCK+8ACfEALAIAGhckB2cAHcNAIA3EAKHoADsAm4ACqIFpWzHAD
+LNAF85gEOHoMI1AE9BBjZLAMyxAI1noNYQABV3CkOvCDlRAGieCdJeCUk2AFlZAImWCdZ0oCnuAJ
+AXAHx4kMypAJ6JAOTkWm6ZCv+Gqv1/AAa3Cnu9AHOLCou+AEMpAHMuAEQNCm5ukEd+oKTpYBhyqn
+wNCmffAIi3oDdsoKDUANf2AHHQAKXjCpyKZsC1ELK5oHhmCqndoItfAMouoAA1AEUXADN/8gDZua
+irogoRLKD3DABwBwlBcgoQ7gqQMxDSYQoUXws8EwBlIQARHgADx7oIeAD/iAs6LQBTtKD97gDceA
+Y8vwAGKLDkPaAmZ7DVqwAiuADoLQtoIwDGFAAvRKD27btuiwDNwQAn6QCJggCHErC8NQt4LbtuZA
+rY/wB3UABEvwB0tAAX/wBx77B4rLuEBQB4dbBxRQB3/wCBRwuY/rqIybuWnwB/BADZprDIpwCl6A
+B1TwZcXDEOcQDHyADxLaBQrKAm6ABSawCkUgDA4QA1vgBpuaDSubmodADweACiwACfTgBmpQuwo6
+EO5ACcwgoXzHApgKCZTgDWjgBtJwCKX/KgqowLs+gA87qgl5sAVjcAwx9gBOmQhDyg3cYA7XQALo
+ag6JIAuyEAaBiwlZEAZvy5VhMA9iW797OwJ+mwhtiwkCPA8O/MDz0AUwAAPGgLjUAA+kG7kajMGl
+Sw2Xa7p/YAwejLiPe8EZbMLwMA5y4AWnEA2qOwEn9Csz0BBBoKvCyw+AOQZoEAEmUKrSYAmocAPC
+6wPHIKFo4A3qhApbwAIL4AbTsAUSmg1BwKsCwZTVWwTF0Kr7sAqRIw2r8MWrsLNFwAfkiw/Pagiv
+GZuwuQPKMAzxAAHsEAjue53IoL/YqQURsAMQAAEBMALxEMdQQK3WOgnokAnpoAwQMA+y/wABytAC
+MgoFkEytpVAKUPAFXxAMRmAHcjAOrGAHrDAOH9sBdvAHnOzJDJTJ3aDCdmAEHVDBOACp4wAPngxq
+sswKHbDC9uAP9gAKEyAJkkAoiAW7sgsHUVAEA8AH3rAADlDMA5APTICsOEvEK2sISQDGbuAGKXoM
+MSChCzDFA2HFEqoKMCDGU1vORRAMQ2zGPNqjwiAMbqsACkAKyBAIy5CtezykewwB+AwBgRAGb8wO
+eBwBdxyQk4DIiqytUNC11bDQjrnQ1eANatANmSwBctANkCoBXsDKRuAFEoDKISAHmcwKchACkNoN
+XuAFHTDRxmAH3XDLK20P3aAIXgAKH/8gAAJABYV1WJZKENGwD8uAj6iwB3yQB6VqAqx6o/ywDzrX
+qtHMAuNszj27D7TAzUFAC7XYk1d8DGggoVgwjz75k9mw1UUwBtFsvtCKY9IKyVDwAGFAChAABSYQ
+D6SwAnJryPlqv0E6CeaQBEFKCkPa1/EQAa+gDKSgyKSgDFCAYw0gWMUmWP4QDXgACpLNwjGwy16w
+CYRk0jP9AfmwwpINCi38AZONBzHQDSLrBR8QAzFw0p8dDURg0wIwAbVAMwgAIZYajyZACSYQoiwQ
+DGKwd3BACQd6DPsgoaugBhVAAF+LtVuACmOgCl8NCbvtA0WACHAQxZ3KBywgBUh5xVf/i6NfYLNd
+67XeUNxFoArRrLXQ2rVf8LVorQpZAM/LEAEKgAkPMK3UugyFKwXw3K/uS6Zkurf+HA+X4MeKXN/U
+Or/0W5DmQAZqwAV4EOF4MEAR3kETTuESzkEXTuEaLuF4gEzqMAGy7S4y7G0CIZO4cM1usAAcygcb
+8NtwAAczGwUrSw+KIDI5sNw4ugUxgAqqrdqWkIqagKM3IKEm8AvggMxhzQG8WwT4wKxEvAVbcANe
+6wDHoLTHkN7nK+XIiqGqIKNuoAAuQAb0PQycgNbLwAlZYA6ZAM9ZgA8a6pj4wJTTAM9kMAIKcODD
+YI+XELZPGZD3fQk1ADyEXuiGfuiI/17oJ0Ti8mLiALCXhyAM/AAJzIoIQcAAAEALP7gHK0uz+SAy
+9vJi0ewNiCAKiHDqpy4KxVwEh3ADFVoEaDwCrSkKnX4IlvAFpSoMsz7rYowIHVDGZ/yawi7shiAM
+8bACxXAJLvC2arwDzq4L7hwGOqAJIyDAp74DWCAICiAKOrADfisFgSsIiLDGzb4DYVAMW+DLkuAz
+6s7uvuzu6w5Q7y7v8d7u9A7vr3Mzb4In/mEv3wwJW20I9VDpccCrCOCpDIDr/OAABBAsAqEDOkzk
+pQrVPkAPNRAHqOAGO1rOPoAIkJAP9+AP+IAInV7O1LwFG7DVojAG5Ny77QzP8DwC6P+QB3AQDGzt
+xu08pD9qCBEwoohg7EOa8/EwDFgAA3zgz/SgCubAv0L/o0A/DFKuM0+DM1Jf9Twz9TtD9Vcv9YPC
+KLAwNW9BEN6gCrJLCynABPXw6S2KAI3QCAgWA0wgCQjg71sgu3wQA3EQA40Z545pCXGfAiGPCk27
+9yxgCc4sCYDvDz0++I55DN6wBUxwD0hAC1L+RXkQ55D5YlWJCrTQCMD7JdWQ+ZegCsDABz8YDC3m
+YtJ6CegeA0leDEjMdxea+avfAUzABHxyKNqSLYqi+72/LV2/J41iJabgFAQRu3BAC0gA+HEgMgKK
+AEjQ9svvc09g+huw/CH/49qP+Cn8YAopEP2Kr/33kALk7/1t3wjhL/7kv0XKn/iqjQrwH/+oUIfn
+KAZxIIhKLOX6/0VfFAT5r/8AsWWLvzgFgxwsGCcIKoENBdaIQyBXDooVLV7EmFHjxhwzPHq8hUEk
+BgAlSyJo1CiFqRQtTZmEGRMmSpUsU95MiWSlSVNIcKbcCbPnT6Avba5MQZTWUlr3YN2CClUMLXDg
+mC69J+aWmA1VrV7NOoMruA1ixHatehWr2Y9t3b6FG1du26ghR4qUmVfvXr59/f71e1fwYMIj7WKA
+avhwYpGMES+uC9XUZMmUb002VTnzZcuYNX8+LBjwaNKlTQMunFr1atatXb9mAx0zIAA7
+
+------=_NextPart_000_0000_01CB8712.38374B20
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.recursosvisualbasic.com.ar/css/tutoriales-manuales-2.css
+
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 13px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; COLOR: #003366; PADDING-TOP: 0px; FONT-FAMILY: =
+Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #e8edfd
+}
+.ad-right {
+	FLOAT: right; MARGIN: 2px 5px 5px 25px
+}
+.ad-none {
+	FLOAT: none; MARGIN: 10px 2em 10em 0px
+}
+.ad-left {
+	FLOAT: left; MARGIN: 10px 2em 10px 0px
+}
+#contenido {
+	BORDER-RIGHT: #d0e3f6 1px solid; BORDER-TOP: #d0e3f6 1px solid; RIGHT: =
+10px; LEFT: 16px; BORDER-LEFT: #d0e3f6 1px solid; WIDTH: 97%; =
+BORDER-BOTTOM: #d0e3f6 1px solid; POSITION: absolute; TOP: 78px; =
+BACKGROUND-COLOR: #ffffff
+}
+#subcontenido {
+	LEFT: 0px; MARGIN: 5px 60px 60px; CLIP: rect(auto auto auto auto); =
+TEXT-ALIGN: justify
+}
+DIV#subcontenido A {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #76a5f3; FONT-FAMILY: =
+Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: underline
+}
+DIV#subcontenido A:hover {
+=09
+}
+DIV#subcontenido UL {
+	MARGIN-TOP: 0px; LIST-STYLE-IMAGE: url(../imagenes/item-lista-4.gif); =
+MARGIN-BOTTOM: 0px; LINE-HEIGHT: 25px; MARGIN-RIGHT: 0px
+}
+DIV#subcontenido UL LI {
+	DISPLAY: list-item; MARGIN-LEFT: 2px; LIST-STYLE-TYPE: none
+}
+H1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 20px; LEFT: 0px; COLOR: #76a5f3; =
+FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: justify
+}
+H2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; LEFT: 0px; PADDING-BOTTOM: 3px; =
+COLOR: #76a5f3; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; =
+TEXT-ALIGN: justify
+}
+H3 {
+	FONT-WEIGHT: bold; FONT-SIZE: 20px; LEFT: 0px; COLOR: #76a5f3; =
+FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: justify
+}
+HR {
+	BORDER-RIGHT: #ccc 1px dotted; BORDER-TOP: #ccc 1px dotted; =
+BORDER-LEFT: #ccc 1px dotted; COLOR: #cc0000; BORDER-BOTTOM: #ccc 1px =
+dotted; HEIGHT: 1px
+}
+.S1 {
+	FONT-WEIGHT: normal; FONT-SIZE: 14px; COLOR: #007f00; FONT-STYLE: =
+normal; FONT-FAMILY: "Courier New", Courier, mono
+}
+.Titulochico {
+	FONT-WEIGHT: bold; COLOR: #006699; FONT-FAMILY: Verdana, Arial, =
+Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.tablaCodigo {
+	BORDER-RIGHT: #d0e3f6 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: =
+#d0e3f6 1px solid; DISPLAY: block; PADDING-LEFT: 10pt; FONT-SIZE: 14px; =
+PADDING-BOTTOM: 10pt; MARGIN: 8px 0px; OVERFLOW: auto; BORDER-LEFT: =
+#d0e3f6 1px solid; WIDTH: 97%; COLOR: #000066; PADDING-TOP: 10px; =
+BORDER-BOTTOM: #d0e3f6 1px solid; FONT-STYLE: normal; FONT-FAMILY: =
+"Courier New", Courier, mono; BACKGROUND-COLOR: #f3f5fe
+}
+.iconodescarga {
+	PADDING-LEFT: 25px; BACKGROUND: url(../imagenes/descargar.gif) =
+no-repeat 1px 50%; LEFT: 50px
+}
+.iconoenlace {
+	PADDING-LEFT: 25px; BACKGROUND: url(../imagenes/enlace.gif) no-repeat =
+1px 50%; LEFT: 50px
+}
+.TituloPagina {
+	FONT-WEIGHT: normal; FONT-SIZE: 18px; COLOR: #cccccc; FONT-STYLE: =
+normal; FONT-FAMILY: 'trebuchet ms', verdana, sans-serif
+}
+.enlaces-relacionados {
+	BORDER-RIGHT: #d0e3f6 1px solid; PADDING-RIGHT: 5px; =
+BACKGROUND-POSITION: 2px 50%; BORDER-TOP: #d0e3f6 1px solid; =
+PADDING-LEFT: 25px; FONT-SIZE: 13px; LEFT: 0px; BACKGROUND-IMAGE: =
+url(../imagenes/enlaces-relacionados-4.gif); PADDING-BOTTOM: 5px; =
+BORDER-LEFT: #d0e3f6 1px solid; COLOR: #003c77; PADDING-TOP: 5px; =
+BORDER-BOTTOM: #d0e3f6 1px solid; BACKGROUND-REPEAT: no-repeat; =
+BACKGROUND-COLOR: #e8edfd
+}
+.Cabecera-contenido {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 35px; FONT-WEIGHT: bold; FONT-SIZE: =
+14px; BACKGROUND-IMAGE: url(../imagenes/tutorial-2.gif); MARGIN-BOTTOM: =
+25px; PADDING-BOTTOM: 5px; COLOR: #09275b; PADDING-TOP: 5px; =
+BORDER-BOTTOM: #cccccc 1px dotted; BACKGROUND-REPEAT: no-repeat; =
+FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.Url-Activo {
+	FONT-WEIGHT: bold
+}
+.resalte-rojo {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #ff0000; FONT-FAMILY: =
+Verdana, Arial, Helvetica, sans-serif
+}
+.copyright {
+	BORDER-RIGHT: #d0e3f6 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: =
+#d0e3f6 1px solid; PADDING-LEFT: 3px; PADDING-BOTTOM: 5px; BORDER-LEFT: =
+#d0e3f6 1px solid; COLOR: #999999; PADDING-TOP: 5px; BORDER-BOTTOM: =
+#d0e3f6 1px solid; BACKGROUND-COLOR: #e8edfd
+}
+.texto-seccion {
+	FONT-SIZE: 12px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+#superior {
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; LEFT: 0px; WIDTH: 100%; =
+FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; POSITION: absolute; =
+TOP: 0px; HEIGHT: 75px; BACKGROUND-COLOR: #000000; TEXT-ALIGN: left; =
+TEXT-DECORATION: none
+}
+#superior UL {
+	PADDING-LEFT: 0px; FLOAT: left; MARGIN-LEFT: 2px; WIDTH: 98%; =
+MARGIN-RIGHT: 0px; BACKGROUND-COLOR: #000
+}
+#superior UL LI {
+	DISPLAY: inline
+}
+#superior UL LI A.nav {
+	BORDER-RIGHT: #666666 1px dashed; PADDING-RIGHT: 1em; PADDING-LEFT: =
+1em; FLOAT: left; PADDING-BOTTOM: 0.2em; COLOR: #ffffff; PADDING-TOP: =
+0.2em; BACKGROUND-COLOR: #000; TEXT-DECORATION: none
+}
+#superior UL LI A.nav:hover {
+	BORDER-RIGHT: #666666 1px dotted; COLOR: #ffffff; BACKGROUND-COLOR: =
+#369
+}
+.header-buscar {
+	PADDING-RIGHT: 5px; BACKGROUND-POSITION: 5px 50%; PADDING-LEFT: 25px; =
+FONT-WEIGHT: bold; BACKGROUND-IMAGE: url(../imagenes/item-buscar-2.gif); =
+PADDING-BOTTOM: 5px; WIDTH: 200px; PADDING-TOP: 5px; BORDER-BOTTOM: =
+#cccccc thin dotted; BACKGROUND-REPEAT: no-repeat
+}
+.sinlista {
+	LIST-STYLE-TYPE: none
+}
+.dp-highlighter {
+	BORDER-RIGHT: #e8edfd 2px solid; BORDER-TOP: #e8edfd 2px solid; =
+FONT-SIZE: 12px; MARGIN: 18px 0px; OVERFLOW: auto; BORDER-LEFT: #e8edfd =
+2px solid; WIDTH: 99%; BORDER-BOTTOM: #e8edfd 2px solid; FONT-FAMILY: =
+"Courier New" , Courier, mono; BACKGROUND-COLOR: #f3f7fe
+}
+.dp-highlighter .bar {
+	PADDING-LEFT: 45px
+}
+.collapsed .bar {
+	PADDING-LEFT: 0px
+}
+.nogutter .bar {
+	PADDING-LEFT: 0px
+}
+.dp-highlighter OL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px =
+0px 1px 45px; BORDER-LEFT: #e8edfd 1px solid; COLOR: #aeaeae; =
+PADDING-TOP: 0px
+}
+.nogutter OL {
+	MARGIN-LEFT: 0px; LIST-STYLE-TYPE: none
+}
+.dp-highlighter OL LI {
+	PADDING-LEFT: 10px; LINE-HEIGHT: 14px; BACKGROUND-COLOR: #fff
+}
+.dp-highlighter .columns DIV {
+	PADDING-LEFT: 10px; BORDER-LEFT: #6ce26c 3px solid; LINE-HEIGHT: 14px; =
+BACKGROUND-COLOR: #fff
+}
+.nogutter OL LI {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: =
+0px
+}
+.dp-highlighter OL LI.alt {
+=09
+}
+.dp-highlighter OL LI SPAN {
+	COLOR: #494949
+}
+.printing {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium =
+none; BORDER-BOTTOM: medium none
+}
+.printing .tools {
+	DISPLAY: none
+}
+.printing LI {
+	DISPLAY: list-item
+}
+.dp-highlighter .tools {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 9px; PADDING-BOTTOM: =
+17px; BORDER-LEFT: #e8edfd 1px solid; TEXT-INDENT: 10px; PADDING-TOP: =
+10px; BORDER-BOTTOM: #e8edfd 2pt solid; BACKGROUND-COLOR: #fff
+}
+.collapsed .tools {
+	BORDER-BOTTOM: 0px
+}
+.dp-highlighter .tools A {
+	FONT-SIZE: 9px; COLOR: gray; MARGIN-RIGHT: 10px; TEXT-DECORATION: none
+}
+.dp-highlighter .tools A:hover {
+	COLOR: red; TEXT-DECORATION: underline
+}
+.dp-vb {
+=09
+}
+.dp-vb .comment {
+	COLOR: green
+}
+.dp-vb .string {
+	COLOR: #992e0f
+}
+.dp-vb .preprocessor {
+	COLOR: #000000
+}
+.dp-vb .keyword {
+	COLOR: #0000ff
+}
+.dp-vb .datatypes {
+	FONT-WEIGHT: bold; COLOR: #2e8b57
+}
+
+------=_NextPart_000_0000_01CB8712.38374B20
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.recursosvisualbasic.com.ar/js/shCore.js
+
+var =
+dp=3D{sh:{Toolbar:{},Utils:{},RegexLib:{},Brushes:{},Strings:{},Version:"=
+1.4.1"}};dp.SyntaxHighlighter=3Ddp.sh;dp.sh.Toolbar.Commands=3D{ExpandSou=
+rce:{label:"+ expand source",check:function(_1){return =
+_1.collapse;},func:function(_2,_3){_2.parentNode.removeChild(_2);_3.div.c=
+lassName=3D_3.div.className.replace("collapsed","");}},ViewSource:{label:=
+"Texto plano",func:function(_4,_5){var =
+_6=3D_5.originalCode.replace(/</g,"&lt;");var =
+_7=3Dwindow.open("","_blank","width=3D750, height=3D400, location=3D0, =
+resizable=3D1, menubar=3D0, =
+scrollbars=3D1");_7.document.write("<textarea =
+style=3D\"width:99%;height:99%\">"+_6+"</textarea>");_7.document.close();=
+}},CopyToClipboard:{label:"Copiar c=F3digo =
+fuente",check:function(){return =
+window.clipboardData!=3Dnull;},func:function(_8,_9){window.clipboardData.=
+setData("text",_9.originalCode);alert("C=F3digo copiado al =
+Clipboard");}},PrintSource:{label:"Imprimir",func:function(_a,_b){var =
+_c=3Ddocument.createElement("IFRAME");var =
+_d=3Dnull;_c.style.cssText=3D"position:absolute;width:0px;height:0px;left=
+:-500px;top:-500px;";document.body.appendChild(_c);_d=3D_c.contentWindow.=
+document;dp.sh.Utils.CopyStyles(_d,window.document);_d.write("<div =
+class=3D\""+_b.div.className.replace("collapsed","")+" =
+printing\">"+_b.div.innerHTML+"</div>");_d.close();_c.contentWindow.focus=
+();_c.contentWindow.print();alert("Imprimiendo...");document.body.removeC=
+hild(_c);var =
+doc=3D_f.document;dp.sh.Utils.CopyStyles(doc,window.document);doc.write(d=
+p.sh.Strings.AboutDialog.replace("{V}",dp.sh.Version));doc.close();_f.foc=
+us();}}};dp.sh.Toolbar.Create=3Dfunction(_11){var =
+div=3Ddocument.createElement("DIV");div.className=3D"tools";for(var _13 =
+in dp.sh.Toolbar.Commands){var =
+cmd=3Ddp.sh.Toolbar.Commands[_13];if(cmd.check!=3Dnull&&!cmd.check(_11)){=
+continue;}div.innerHTML+=3D"<a href=3D\"#\" =
+onclick=3D\"dp.sh.Toolbar.Command('"+_13+"',this);return =
+false;\">"+cmd.label+"</a>";}return =
+div;};dp.sh.Toolbar.Command=3Dfunction(_15,_16){var =
+n=3D_16;while(n!=3Dnull&&n.className.indexOf("dp-highlighter")=3D=3D-1){n=
+=3Dn.parentNode;}if(n!=3Dnull){dp.sh.Toolbar.Commands[_15].func(_16,n.hig=
+hlighter);}};dp.sh.Utils.CopyStyles=3Dfunction(_18,_19){var =
+_1a=3D_19.getElementsByTagName("link");for(var =
+i=3D0;i<_1a.length;i++){if(_1a[i].rel.toLowerCase()=3D=3D"stylesheet"){_1=
+8.write("<link type=3D\"text/css\" rel=3D\"stylesheet\" =
+href=3D\""+_1a[i].href+"\"></link>");}}};dp.sh.RegexLib=3D{MultiLineCComm=
+ents:new RegExp("/\\*[\\s\\S]*?\\*/","gm"),SingleLineCComments:new =
+RegExp("//.*$","gm"),SingleLinePerlComments:new RegExp("#.*$","gm"),=0A=
+DoubleQuotedString:new RegExp("\"(?:\\.|(\\\\\\\")|[^\\\"\"])*\"","g"),=0A=
+VBQuotedString:new RegExp("\"(?:\\.|[^\\\"\"])*\"","g"),=0A=
+SingleQuotedString:new =
+RegExp("'(?:\\.|(\\\\\\')|[^\\''])*'","g")};dp.sh.Match=3Dfunction(_1c,_1=
+d,css){this.value=3D_1c;this.index=3D_1d;this.length=3D_1c.length;this.cs=
+s=3Dcss;};dp.sh.Highlighter=3Dfunction(){this.noGutter=3Dfalse;this.addCo=
+ntrols=3Dtrue;this.collapse=3Dfalse;this.tabsToSpaces=3Dtrue;this.wrapCol=
+umn=3D80;this.showColumns=3Dtrue;};dp.sh.Highlighter.SortCallback=3Dfunct=
+ion(m1,m2){if(m1.index<m2.index){return =
+-1;}else{if(m1.index>m2.index){return =
+1;}else{if(m1.length<m2.length){return =
+-1;}else{if(m1.length>m2.length){return 1;}}}}return =
+0;};dp.sh.Highlighter.prototype.CreateElement=3Dfunction(_21){var =
+_22=3Ddocument.createElement(_21);_22.highlighter=3Dthis;return =
+_22;};dp.sh.Highlighter.prototype.GetMatches=3Dfunction(_23,css){var =
+_25=3D0;var =
+_26=3Dnull;while((_26=3D_23.exec(this.code))!=3Dnull){this.matches[this.m=
+atches.length]=3Dnew =
+dp.sh.Match(_26[0],_26.index,css);}};dp.sh.Highlighter.prototype.AddBit=3D=
+function(str,css){if(str=3D=3Dnull||str.length=3D=3D0){return;}var =
+_29=3Dthis.CreateElement("SPAN");str=3Dstr.replace(/&/g,"&amp;");str=3Dst=
+r.replace(/ =
+/g,"&nbsp;");str=3Dstr.replace(/</g,"&lt;");str=3Dstr.replace(/\n/gm,"&nb=
+sp;<br>");if(css!=3Dnull){var _2a=3Dnew =
+RegExp("<br>","gi");if(_2a.test(str)){var =
+_2b=3Dstr.split("&nbsp;<br>");str=3D"";for(var =
+i=3D0;i<_2b.length;i++){_29=3Dthis.CreateElement("SPAN");_29.className=3D=
+css;_29.innerHTML=3D_2b[i];this.div.appendChild(_29);if(i+1<_2b.length){t=
+his.div.appendChild(this.CreateElement("BR"));}}}else{_29.className=3Dcss=
+;_29.innerHTML=3Dstr;this.div.appendChild(_29);}}else{_29.innerHTML=3Dstr=
+;this.div.appendChild(_29);}};dp.sh.Highlighter.prototype.IsInside=3Dfunc=
+tion(_2d){if(_2d=3D=3Dnull||_2d.length=3D=3D0){return false;}for(var =
+i=3D0;i<this.matches.length;i++){var =
+c=3Dthis.matches[i];if(c=3D=3Dnull){continue;}if((_2d.index>c.index)&&(_2=
+d.index<c.index+c.length)){return true;}}return =
+false;};dp.sh.Highlighter.prototype.ProcessRegexList=3Dfunction(){for(var=
+ =
+i=3D0;i<this.regexList.length;i++){this.GetMatches(this.regexList[i].rege=
+x,this.regexList[i].css);}};dp.sh.Highlighter.prototype.ProcessSmartTabs=3D=
+function(_31){var _32=3D_31.split("\n");var _33=3D"";var _34=3D4;var =
+tab=3D"\t";function InsertSpaces(_36,pos,_38){var =
+_39=3D_36.substr(0,pos);var _3a=3D_36.substr(pos+1,_36.length);var =
+_3b=3D"";for(var i=3D0;i<_38;i++){_3b+=3D" ";}return =
+_39+_3b+_3a;}function =
+ProcessLine(_3d,_3e){if(_3d.indexOf(tab)=3D=3D-1){return _3d;}var =
+pos=3D0;while((pos=3D_3d.indexOf(tab))!=3D-1){var =
+_40=3D_3e-pos%_3e;_3d=3DInsertSpaces(_3d,pos,_40);}return _3d;}for(var =
+i=3D0;i<_32.length;i++){_33+=3DProcessLine(_32[i],_34)+"\n";}return =
+_33;};dp.sh.Highlighter.prototype.SwitchToList=3Dfunction(){var =
+_42=3Dthis.div.innerHTML.replace(/<(br)\/?>/gi,"\n");var =
+_43=3D_42.split("\n");if(this.addControls=3D=3Dtrue){this.bar.appendChild=
+(dp.sh.Toolbar.Create(this));}if(this.showColumns){var =
+div=3Dthis.CreateElement("div");var _45=3Dthis.CreateElement("div");var =
+_46=3D10;var =
+i=3D1;while(i<=3D150){if(i%_46=3D=3D0){div.innerHTML+=3Di;i+=3D(i+"").len=
+gth;}else{div.innerHTML+=3D"&middot;";i++;}}_45.className=3D"columns";_45=
+.appendChild(div);this.bar.appendChild(_45);}for(var =
+i=3D0,lineIndex=3Dthis.firstLine;i<_43.length-1;i++,lineIndex++){var =
+li=3Dthis.CreateElement("LI");var =
+_4a=3Dthis.CreateElement("SPAN");li.className=3D(i%2=3D=3D0)?"alt":"";_4a=
+.innerHTML=3D_43[i]+"&nbsp;";li.appendChild(_4a);this.ol.appendChild(li);=
+}this.div.innerHTML=3D"";};dp.sh.Highlighter.prototype.Highlight=3Dfuncti=
+on(_4b){function Trim(str){return =
+str.replace(/^\s*(.*?)[\s\n]*$/g,"$1");}function Chop(str){return =
+str.replace(/\n*$/,"").replace(/^\n*/,"");}function Unindent(str){var =
+_4f=3Dstr.split("\n");var _50=3Dnew Array();var _51=3Dnew =
+RegExp("^\\s*","g");var min=3D1000;for(var =
+i=3D0;i<_4f.length&&min>0;i++){if(Trim(_4f[i]).length=3D=3D0){continue;}v=
+ar =
+_54=3D_51.exec(_4f[i]);if(_54!=3Dnull&&_54.length>0){min=3DMath.min(_54[0=
+].length,min);}}if(min>0){for(var =
+i=3D0;i<_4f.length;i++){_4f[i]=3D_4f[i].substr(min);}}return =
+_4f.join("\n");}function Copy(_56,_57,_58){return =
+_56.substr(_57,_58-_57);}var =
+pos=3D0;this.originalCode=3D_4b;this.code=3DChop(Unindent(_4b));this.div=3D=
+this.CreateElement("DIV");this.bar=3Dthis.CreateElement("DIV");this.ol=3D=
+this.CreateElement("OL");this.matches=3Dnew =
+Array();this.div.className=3D"dp-highlighter";this.div.highlighter=3Dthis=
+;this.bar.className=3D"bar";this.ol.start=3Dthis.firstLine;if(this.CssCla=
+ss!=3Dnull){this.ol.className=3Dthis.CssClass;}if(this.collapse){this.div=
+.className+=3D" collapsed";}if(this.noGutter){this.div.className+=3D" =
+nogutter";}if(this.tabsToSpaces=3D=3Dtrue){this.code=3Dthis.ProcessSmartT=
+abs(this.code);}this.ProcessRegexList();if(this.matches.length=3D=3D0){th=
+is.AddBit(this.code,null);this.SwitchToList();this.div.appendChild(this.o=
+l);return;}this.matches=3Dthis.matches.sort(dp.sh.Highlighter.SortCallbac=
+k);for(var =
+i=3D0;i<this.matches.length;i++){if(this.IsInside(this.matches[i])){this.=
+matches[i]=3Dnull;}}for(var i=3D0;i<this.matches.length;i++){var =
+_5c=3Dthis.matches[i];if(_5c=3D=3Dnull||_5c.length=3D=3D0){continue;}this=
+.AddBit(Copy(this.code,pos,_5c.index),null);this.AddBit(_5c.value,_5c.css=
+);pos=3D_5c.index+_5c.length;}this.AddBit(this.code.substr(pos),null);thi=
+s.SwitchToList();this.div.appendChild(this.bar);this.div.appendChild(this=
+.ol);};dp.sh.Highlighter.prototype.GetKeywords=3Dfunction(str){return =
+"\\b"+str.replace(/ =
+/g,"\\b|\\b")+"\\b";};dp.sh.HighlightAll=3Dfunction(_5e,_5f,_60,_61,_62,_=
+63){function FindValue(){var a=3Darguments;for(var =
+i=3D0;i<a.length;i++){if(a[i]=3D=3Dnull){continue;}if(typeof =
+(a[i])=3D=3D"string"&&a[i]!=3D""){return a[i]+"";}if(typeof =
+(a[i])=3D=3D"object"&&a[i].value!=3D""){return a[i].value+"";}}return =
+null;}function IsOptionSet(_66,_67){for(var =
+i=3D0;i<_67.length;i++){if(_67[i]=3D=3D_66){return true;}}return =
+false;}function GetOptionValue(_69,_6a,_6b){var _6c=3Dnew =
+RegExp("^"+_69+"\\[(\\w+)\\]$","gi");var _6d=3Dnull;for(var =
+i=3D0;i<_6a.length;i++){if((_6d=3D_6c.exec(_6a[i]))!=3Dnull){return =
+_6d[1];}}return _6b;}var _6f=3Ddocument.getElementsByName(_5e);var =
+_70=3Dnull;var _71=3Dnew Object();var =
+_72=3D"value";if(_6f=3D=3Dnull){return;}for(var _73 in =
+dp.sh.Brushes){var =
+_74=3Ddp.sh.Brushes[_73].Aliases;if(_74=3D=3Dnull){continue;}for(var =
+i=3D0;i<_74.length;i++){_71[_74[i]]=3D_73;}}for(var =
+i=3D0;i<_6f.length;i++){var _77=3D_6f[i];var =
+_78=3DFindValue(_77.attributes["class"],_77.className,_77.attributes["lan=
+guage"],_77.language);var =
+_79=3D"";if(_78=3D=3Dnull){continue;}_78=3D_78.split(":");_79=3D_78[0].to=
+LowerCase();if(_71[_79]=3D=3Dnull){continue;}_70=3Dnew =
+dp.sh.Brushes[_71[_79]]();_77.style.display=3D"none";_70.noGutter=3D(_5f=3D=
+=3Dnull)?IsOptionSet("nogutter",_78):!_5f;_70.addControls=3D(_60=3D=3Dnul=
+l)?!IsOptionSet("nocontrols",_78):_60;_70.collapse=3D(_61=3D=3Dnull)?IsOp=
+tionSet("collapse",_78):_61;_70.showColumns=3D(_63=3D=3Dnull)?IsOptionSet=
+("showcolumns",_78):_63;_70.firstLine=3D(_62=3D=3Dnull)?parseInt(GetOptio=
+nValue("firstline",_78,1)):_62;_70.Highlight(_77[_72]);_77.parentNode.ins=
+ertBefore(_70.div,_77);}};
+------=_NextPart_000_0000_01CB8712.38374B20
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.recursosvisualbasic.com.ar/js/shBrushVb.js
+
+dp.sh.Brushes.Vb =3D function()=0A=
+{=0A=
+	var datatypes =3D 'Form'; =0A=
+	var keywords =3D	'AddHandler Option Strict On Environ VarType Day =
+DateSerial Year AddressOf AndAlso Alias And Ansi As Assembly Auto ' +=0A=
+					'Boolean ByRef Byte ByVal Call Case Catch CBool CByte CChar CDate ' =
++=0A=
+					'CDec CDbl Char CInt Class CLng CObj Const CShort CSng CStr CType ' =
++=0A=
+					'Date Decimal Declare Default Delegate Dim DirectCast Do Double =
+Each ' +=0A=
+					'Else ElseIf End Enum Erase Error Event Exit False Finally For =
+Friend ' +=0A=
+					'Function Get GetType GoSub GoTo Handles If Implements Imports In ' =
++=0A=
+					'Inherits Integer Interface Is Let Lib Like Long Loop Me Mod Module =
+' +=0A=
+					'MustInherit MustOverride MyBase MyClass Namespace New Next Not =
+Nothing ' +=0A=
+					'NotInheritable NotOverridable Object On Option Optional Or OrElse =
+' +=0A=
+					'Overloads Overridable Overrides ParamArray Preserve Private =
+Property ' +=0A=
+					'Protected Public RaiseEvent ReadOnly ReDim REM RemoveHandler =
+Resume ' +=0A=
+					'Return Select Set Shadows Shared Short Single Static Step Stop =
+String ' +=0A=
+					'Structure Sub SyncLock Then Throw To True Try TypeOf Unicode Until =
+' +=0A=
+					'Variant Wend End Type Option Explicit MsgBox Val Shell IsNull Chr =
+When While With WithEvents WriteOnly Xor CreateObject Using End Using';=0A=
+=0A=
+	this.regexList =3D [=0A=
+		{ regex: new RegExp('\'.*$', 'gm'),							css: 'comment' },			// one =
+line comments=0A=
+		{ regex: dp.sh.RegexLib.VBQuotedString,					css: 'string' },			// =
+strings=0A=
+		{ regex: new RegExp('^\\s*#.*', 'gm'),						css: 'preprocessor' },		// =
+preprocessor tags like #region and #endregion=0A=
+		{ regex: new RegExp(this.GetKeywords(datatypes), 'gm'),		css: =
+'datatypes' },=0A=
+		{ regex: new RegExp(this.GetKeywords(keywords), 'gm'),		css: 'keyword' =
+}			// c# keyword=0A=
+		];=0A=
+=0A=
+	this.CssClass =3D 'dp-vb';=0A=
+}=0A=
+=0A=
+dp.sh.Brushes.Vb.prototype	=3D new dp.sh.Highlighter();=0A=
+dp.sh.Brushes.Vb.Aliases	=3D ['vb', 'vb.net', 'vbs'];=0A=
+
+------=_NextPart_000_0000_01CB8712.38374B20
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.google.com/coop/cse/brand?form=searchbox_006154211409403389812%3Arsvroqctr3c&lang=es
+
+=0A=
+(function() {=0A=
+var f =3D =
+document.getElementById('searchbox_006154211409403389812:rsvroqctr3c');=0A=
+if (!f) {=0A=
+f =3D document.getElementById('searchbox_demo');=0A=
+}=0A=
+if (f && f.q) {=0A=
+var q =3D f.q;=0A=
+var n =3D navigator;=0A=
+var l =3D location;=0A=
+var su =3D function () {=0A=
+var u =3D document.createElement('input');=0A=
+var v =3D document.location.toString();=0A=
+var existingSiteurl =3D /(?:[?&]siteurl=3D)([^&#]*)/.exec(v);=0A=
+if (existingSiteurl) {=0A=
+v =3D decodeURI(existingSiteurl[1]);=0A=
+}=0A=
+var delimIndex =3D v.indexOf('://');=0A=
+if (delimIndex >=3D 0) {=0A=
+v =3D v.substring(delimIndex + '://'.length, v.length);=0A=
+}=0A=
+u.name =3D 'siteurl';=0A=
+u.value =3D v;=0A=
+u.type =3D 'hidden';=0A=
+f.appendChild(u);=0A=
+};=0A=
+if (n.appName =3D=3D 'Microsoft Internet Explorer') {=0A=
+var s =3D f.parentNode.childNodes;=0A=
+for (var i =3D 0; i < s.length; i++) {=0A=
+        if (s[i].nodeName =3D=3D 'SCRIPT' &&=0A=
+            s[i].attributes['src'] &&=0A=
+            s[i].attributes['src'].nodeValue =3D=3D =
+unescape('http:\x2F\x2Fwww.google.com\x2Fcoop\x2Fcse\x2Fbrand?form=3Dsear=
+chbox_006154211409403389812%3Arsvroqctr3c\x26lang=3Des')) {=0A=
+          su();=0A=
+          break;=0A=
+        }=0A=
+      }=0A=
+    } else {=0A=
+      su();=0A=
+    }=0A=
+=0A=
+    =0A=
+    if (n.platform =3D=3D 'Win32') {=0A=
+      q.style.cssText =3D 'border: 1px solid #7e9db9; padding: 2px;';=0A=
+    }=0A=
+=0A=
+    =0A=
+    if (window.history.navigationMode) {=0A=
+      window.history.navigationMode =3D 'compatible';=0A=
+    }=0A=
+=0A=
+    var b =3D function() {=0A=
+      if (q.value =3D=3D '') {=0A=
+        q.style.background =3D '#FFFFFF =
+url(http:\x2F\x2Fwww.google.com\x2Fcse\x2Fintl\x2Fes\x2Fimages\x2Fgoogle_=
+custom_search_watermark.gif) left no-repeat';=0A=
+      }=0A=
+    };=0A=
+=0A=
+    var f =3D function() {=0A=
+      q.style.background =3D '#ffffff';=0A=
+    };=0A=
+=0A=
+    q.onfocus =3D f;=0A=
+    q.onblur =3D b;=0A=
+=0A=
+    =0A=
+    if (!/[&?]q=3D[^&]/.test(l.search)) {=0A=
+      b();=0A=
+    }=0A=
+  }=0A=
+})();=0A=
+
+------=_NextPart_000_0000_01CB8712.38374B20
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://pagead2.googlesyndication.com/pagead/show_ads.js
+
+=0A=
+(function(){var g=3Dtrue,h=3Dnull,i=3Dfalse,j=3D(new Date).getTime();var =
+k=3Dthis,aa=3Dfunction(a,b,c){a=3Da.split(".");c=3Dc||k;!(a[0]in =
+c)&&c.execScript&&c.execScript("var "+a[0]);for(var =
+d;a.length&&(d=3Da.shift());)if(!a.length&&b!=3D=3Dundefined)c[d]=3Db;els=
+e c=3Dc[d]?c[d]:c[d]=3D{}},ba=3Dfunction(){return =
+Function.prototype.call.apply(Function.prototype.bind,arguments)},ca=3Dfu=
+nction(a,b){var c=3Db||k;if(arguments.length>2){var =
+d=3DArray.prototype.slice.call(arguments,2);return function(){var =
+f=3DArray.prototype.slice.call(arguments);Array.prototype.unshift.apply(f=
+,d);return a.apply(c,f)}}else return function(){return a.apply(c,=0A=
+arguments)}},l=3Dfunction(){l=3DFunction.prototype.bind&&Function.prototy=
+pe.bind.toString().indexOf("native code")!=3D-1?ba:ca;return =
+l.apply(h,arguments)};var ea=3Dfunction(a,b){var =
+c=3DparseFloat(a);return =
+isNaN(c)||c>1||c<0?b:c},n=3Dfunction(a,b){if(a=3D=3D"true")return =
+g;if(a=3D=3D"false")return i;return =
+b},fa=3D/^([\w-]+\.)*([\w-]{2,})(\:[0-9]+)?$/,ga=3Dfunction(a,b){if(!a)re=
+turn b;var c=3Da.match(fa);return c?c[0]:b};var ha=3Dfunction(){return =
+ga("","pagead2.googlesyndication.com")},ia=3Dfunction(){return =
+ga("","pagead2.googlesyndication.com")};var =
+ja=3D/&/g,ka=3D/</g,la=3D/>/g,ma=3D/\"/g,p=3D{"\u0000":"\\0","\u0008":"\\=
+b","\u000c":"\\f","\n":"\\n","\r":"\\r","\t":"\\t","\u000b":"\\x0B",'"':'=
+\\"',"\\":"\\\\"},t=3D{"'":"\\'"},u=3Dfunction(a,b){if(a<b)return-1;else =
+if(a>b)return 1;return 0};var v,y,A,B,C=3Dfunction(){return =
+k.navigator?k.navigator.userAgent:h};B=3DA=3Dy=3Dv=3Di;var =
+D;if(D=3DC()){var =
+na=3Dk.navigator;v=3DD.indexOf("Opera")=3D=3D0;y=3D!v&&D.indexOf("MSIE")!=
+=3D-1;A=3D!v&&D.indexOf("WebKit")!=3D-1;B=3D!v&&!A&&na.product=3D=3D"Geck=
+o"}var F=3Dy,oa=3DB,pa=3DA,G;=0A=
+a:{var H=3D"",I;if(v&&k.opera){var J=3Dk.opera.version;H=3Dtypeof =
+J=3D=3D"function"?J():J}else{if(oa)I=3D/rv\:([^\);]+)(\)|;)/;else =
+if(F)I=3D/MSIE\s+([^\);]+)(\)|;)/;else =
+if(pa)I=3D/WebKit\/(\S+)/;if(I){var =
+qa=3DI.exec(C());H=3Dqa?qa[1]:""}}if(F){var =
+K,ra=3Dk.document;K=3Dra?ra.documentMode:undefined;if(K>parseFloat(H)){G=3D=
+String(K);break a}}G=3DH}=0A=
+var sa=3DG,ua=3D{},L=3Dfunction(a){var b;if(!(b=3Dua[a])){b=3D0;for(var =
+c=3DString(sa).replace(/^[\s\xa0]+|[\s\xa0]+$/g,"").split("."),d=3DString=
+(a).replace(/^[\s\xa0]+|[\s\xa0]+$/g,"").split("."),f=3DMath.max(c.length=
+,d.length),e=3D0;b=3D=3D0&&e<f;e++){var =
+ta=3Dc[e]||"",s=3Dd[e]||"",m=3DRegExp("(\\d*)(\\D*)","g"),z=3DRegExp("(\\=
+d*)(\\D*)","g");do{var =
+q=3Dm.exec(ta)||["","",""],o=3Dz.exec(s)||["","",""];if(q[0].length=3D=3D=
+0&&o[0].length=3D=3D0)break;b=3Du(q[1].length=3D=3D0?0:parseInt(q[1],10),=
+o[1].length=3D=3D0?0:parseInt(o[1],10))||u(q[2].length=3D=3D=0A=
+0,o[2].length=3D=3D0)||u(q[2],o[2])}while(b=3D=3D0)}b=3Dua[a]=3Db>=3D0}re=
+turn b};!F||L("9");F&&L("9");var va=3Ddocument,M=3Dwindow;ia();var =
+N=3Dfunction(a){return!!a&&typeof =
+a=3D=3D"function"&&!!a.call},wa=3Dfunction(a){if(arguments.length<2)retur=
+n a.length;for(var =
+b=3D1,c=3Darguments.length;b<c;++b)a.push(arguments[b]);return =
+a.length};function O(a){return typeof =
+encodeURIComponent=3D=3D"function"?encodeURIComponent(a):escape(a)}functi=
+on xa(a,b){if(a.attachEvent){a.attachEvent("onload",b);return =
+g}if(a.addEventListener){a.addEventListener("load",b,i);return g}return =
+i}=0A=
+var ya=3Dfunction(a){if(!("google_onload_fired"in =
+a)){a.google_onload_fired=3Di;xa(a,function(){a.google_onload_fired=3Dg})=
+}};var za=3Dea("0",0),Aa=3Dea("0",0);var =
+Ba=3Dn("false",i),Ca=3Dn("false",i),Da=3Dn("false",i);aa("google_protectA=
+ndRun",function(a,b,c){a=3Dl(b,k,a);b=3Dwindow.onerror;window.onerror=3Da=
+;try{c()}catch(d){c=3Dd.toString();var =
+f=3D"";if(d.fileName)f=3Dd.fileName;var =
+e=3D-1;if(d.lineNumber)e=3Dd.lineNumber;if(!a(c,f,e))throw =
+d;}window.onerror=3Db},void 0);=0A=
+aa("google_handleError",function(a,b,c,d){if(Math.random()<0.01){a=3D["ht=
+tp://",ha(),"/pagead/gen_204","?id=3Djserror","&jscb=3D",Ba?1:0,"&jscd=3D=
+",Ca?1:0,"&context=3D",O(a),"&msg=3D",O(b),"&file=3D",O(c),"&line=3D",O(d=
+.toString()),"&url=3D",O(va.URL.substring(0,512)),"&ref=3D",O(va.referrer=
+.substring(0,512))];a.push(["&client=3D",O(M.google_ad_client),"&format=3D=
+",O(M.google_ad_format),"&slotname=3D",O(M.google_ad_slot),"&output=3D",O=
+(M.google_ad_output),"&ad_type=3D",O(M.google_ad_type)].join(""));a=3Da.j=
+oin("");M.google_image_requests||=0A=
+(M.google_image_requests=3D[]);b=3Dnew =
+Image;b.src=3Da;M.google_image_requests.push(b)}return!Da},void 0);var =
+Ea=3Dfunction(a){try{var =
+b=3Da.google_test;a.google_test=3D!b;if(a.google_test=3D=3D=3D!b){a.googl=
+e_test=3Db;return g}}catch(c){}return =
+i},P=3Dh,Ga=3Dfunction(){if(!P){for(var =
+a=3Dwindow;a!=3Da.parent&&Ea(a.parent);)a=3Da.parent;P=3Da}return P};var =
+Q,R=3Dfunction(a){this.e=3D[];this.b=3Da||window;this.a=3D0;this.c=3Dh},H=
+a=3Dfunction(a,b){this.h=3Da;this.n=3Db};R.prototype.g=3Dfunction(a,b){th=
+is.e.push(new =
+Ha(a,b||this.b));S(this)};R.prototype.i=3Dfunction(a){this.a=3D1;if(a)thi=
+s.c=3Dthis.b.setTimeout(l(this.f,this),a)};R.prototype.f=3Dfunction(){if(=
+this.a=3D=3D1){if(this.c!=3Dh){this.b.clearTimeout(this.c);this.c=3Dh}thi=
+s.a=3D0}S(this)};R.prototype.l=3Dfunction(){return =
+g};R.prototype.nq=3DR.prototype.g;R.prototype.al=3DR.prototype.i;R.protot=
+ype.rl=3DR.prototype.f;=0A=
+R.prototype.sz=3DR.prototype.l;var =
+S=3Dfunction(a){a.b.setTimeout(l(a.m,a),0)};R.prototype.m=3Dfunction(){if=
+(this.a=3D=3D0&&this.e.length){var =
+a=3Dthis.e.shift();this.a=3D2;a.n.setTimeout(l(this.j,this,a),0);S(this)}=
+};R.prototype.j=3Dfunction(a){this.a=3D0;a.h()};=0A=
+var Ia=3Dfunction(a){try{return a.sz()}catch(b){return =
+i}},Ja=3Dfunction(a){return!!a&&(typeof a=3D=3D"object"||typeof =
+a=3D=3D"function")&&Ia(a)&&N(a.nq)&&N(a.al)&&N(a.rl)},Ka=3Dfunction(){if(=
+Q&&Ia(Q))return Q;var a=3DGa(),b=3Da.google_jobrunner;if(Ja(b))return =
+Q=3Db;return a.google_jobrunner=3DQ=3Dnew R(a)};var T,U;U=3DT=3Di;var =
+V=3DC();if(V)if(V.indexOf("Firefox")!=3D-1)T=3Dg;else =
+if(V.indexOf("Camino")=3D=3D-1)if(!(V.indexOf("iPhone")!=3D-1||V.indexOf(=
+"iPod")!=3D-1))if(V.indexOf("iPad")=3D=3D-1)if(V.indexOf("Android")=3D=3D=
+-1)if(V.indexOf("Chrome")!=3D-1)U=3Dg;var La=3DT,Ma=3DU;var =
+Na=3Dfunction(a,b,c){var d=3D["<iframe"],f;for(f in =
+a)wa(d,f+"=3D"+a[f]);d.push('style=3D"left:0;position:absolute;top:0;"');=
+d.push("></iframe>");b=3D"border:none;height:"+c+"px;margin:0;padding:0;p=
+osition:relative;visibility:visible;width:"+b+"px";return['<ins =
+style=3D"display:inline-table;',b,'"><ins id=3D"',a.id+"_anchor",'" =
+style=3D"display:block;',b,'">',d.join(" =
+"),"</ins></ins>"].join("")};var =
+Oa=3Dfunction(){},Qa=3Dfunction(a,b,c){switch(typeof b){case =
+"string":Pa(a,b,c);break;case =
+"number":c.push(isFinite(b)&&!isNaN(b)?b:"null");break;case =
+"boolean":c.push(b);break;case "undefined":c.push("null");break;case =
+"object":if(b=3D=3Dh){c.push("null");break}if(b instanceof Array){var =
+d=3Db.length;c.push("[");for(var =
+f=3D"",e=3D0;e<d;e++){c.push(f);Qa(a,b[e],c);f=3D","}c.push("]");break}c.=
+push("{");d=3D"";for(f in b)if(b.hasOwnProperty(f)){e=3Db[f];if(typeof =
+e!=3D"function"){c.push(d);Pa(a,f,c);c.push(":");Qa(a,=0A=
+e,c);d=3D","}}c.push("}");break;case "function":break;default:throw =
+Error("Unknown type: "+typeof =
+b);}},Ra=3D{'"':'\\"',"\\":"\\\\","/":"\\/","\u0008":"\\b","\u000c":"\\f"=
+,"\n":"\\n","\r":"\\r","\t":"\\t","\u000b":"\\u000b"},Sa=3D/\uffff/.test(=
+"\uffff")?/[\\\"\x00-\x1f\x7f-\uffff]/g:/[\\\"\x00-\x1f\x7f-\xff]/g,Pa=3D=
+function(a,b,c){c.push('"');c.push(b.replace(Sa,function(d){if(d in =
+Ra)return Ra[d];var =
+f=3Dd.charCodeAt(0),e=3D"\\u";if(f<16)e+=3D"000";else =
+if(f<256)e+=3D"00";else if(f<4096)e+=3D"0";return =
+Ra[d]=3De+f.toString(16)}));=0A=
+c.push('"')};var =
+W=3D["google_ad_block","google_ad_channel","google_ad_client","google_ad_=
+format","google_ad_height","google_ad_host","google_ad_host_channel","goo=
+gle_ad_host_tier_id","google_ad_output","google_ad_override","google_ad_r=
+egion","google_ad_section","google_ad_slot","google_ad_type","google_ad_w=
+idth","google_adtest","google_allow_expandable_ads","google_alternate_ad_=
+url","google_alternate_color","google_analytics_domain_name","google_anal=
+ytics_uacct","google_bid","google_city","google_color_bg","google_color_b=
+order",=0A=
+"google_color_line","google_color_link","google_color_text","google_color=
+_url","google_container_id","google_contents","google_country","google_cp=
+m","google_ctr_threshold","google_cust_age","google_cust_ch","google_cust=
+_gender","google_cust_id","google_cust_interests","google_cust_job","goog=
+le_cust_l","google_cust_lh","google_cust_u_url","google_disable_video_aut=
+oplay","google_ed","google_eids","google_enable_osd","google_encoding","g=
+oogle_font_face","google_font_size","google_frame_id","google_gl",=0A=
+"google_hints","google_image_size","google_kw","google_kw_type","google_l=
+anguage","google_max_num_ads","google_max_radlink_len","google_num_radlin=
+ks","google_num_radlinks_per_unit","google_num_slots_to_rotate","google_o=
+nly_ads_with_video","google_only_pyv_ads","google_only_userchoice_ads","g=
+oogle_override_format","google_page_url","google_referrer_url","google_re=
+gion","google_reuse_colors","google_rl_dest_url","google_rl_filtering","g=
+oogle_rl_mode","google_rt","google_safe","google_skip","google_tag_info",=0A=
+"google_targeting","google_ui_features","google_ui_version","google_video=
+_doc_id","google_video_product_type","google_with_pyv_ads"];var =
+Ta=3Dfunction(a){this.b=3Da;a.google_iframe_oncopy||(a.google_iframe_onco=
+py=3D{handlers:{},log:[],img:Math.random()<0.1?[]:h});this.d=3Da.google_i=
+frame_oncopy;a.setTimeout(l(this.k,this),3E4)},Ua;var X=3D"var =
+i=3Dthis.id,s=3Dwindow.google_iframe_oncopy,H=3Ds&&s.handlers,h=3DH&&H[i]=
+,w=3Dthis.contentWindow,d;try{d=3Dw.document}catch(e){}if(h&&d&&(!d.body|=
+|!d.body.firstChild)){if(h.call){i+=3D'.call';setTimeout(h,0)}else =
+if(h.match){i+=3D'.nav';w.location.replace(h)}s.log&&s.log.push(i)}";=0A=
+if(/[&<>\"]/.test(X)){if(X.indexOf("&")!=3D-1)X=3DX.replace(ja,"&amp;");i=
+f(X.indexOf("<")!=3D-1)X=3DX.replace(ka,"&lt;");if(X.indexOf(">")!=3D-1)X=
+=3DX.replace(la,"&gt;");if(X.indexOf('"')!=3D-1)X=3DX.replace(ma,"&quot;"=
+)}Ua=3DX;Ta.prototype.set=3Dfunction(a,b){this.d.handlers[a]=3Db};=0A=
+Ta.prototype.k=3Dfunction(){if(this.d.img){var =
+a=3Dthis.d.log,b=3Dthis.b.document;if(a.length){b=3D["http://",ha(),"/pag=
+ead/gen_204?id=3Diframecopy&log=3D",O(a.join("-")),"&url=3D",O(b.URL.subs=
+tring(0,512)),"&ref=3D",O(b.referrer.substring(0,512))].join("");a.length=
+=3D0;a=3Dnew Image;this.d.img.push(a);a.src=3Db}}};var =
+Va=3Dfunction(){var a=3D"script";return["<",a,' =
+src=3D"http://',ia(),"/pagead/js/r20101110/r20101112/show_ads_impl.js",'"=
+></',a,">"].join("")},Wa=3Dfunction(a,b,c,d){return function(){var =
+f=3Di;d&&Ka().al(3E4);try{var =
+e;try{e=3D!!a.document.getElementById(b).contentWindow.document}catch(ta)=
+{e=3Di}if(e){var s=3Da.document.getElementById(b).contentWindow,=0A=
+m=3Ds.document;if(!(m.body&&m.body.firstChild)){m.open();s.google_async_i=
+frame_close=3Dg;m.write(c)}}else{var =
+z=3Da.document.getElementById(b).contentWindow,q;e=3Dc;e=3DString(e);if(e=
+.quote)q=3De.quote();else{s=3D['"'];for(m=3D0;m<e.length;m++){var =
+o=3De.charAt(m),Fa=3Do.charCodeAt(0),jb=3Ds,kb=3Dm+1,da;if(!(da=3Dp[o])){=
+var E;if(Fa>31&&Fa<127)E=3Do;else{var r=3Do;if(r in t)E=3Dt[r];else if(r =
+in p)E=3Dt[r]=3Dp[r];else{var =
+w=3Dr,x=3Dr.charCodeAt(0);if(x>31&&x<127)w=3Dr;else{if(x<256){w=3D"\\x";i=
+f(x<16||x>256)w+=3D"0"}else{w=3D"\\u";if(x<4096)w+=3D=0A=
+"0"}w+=3Dx.toString(16).toUpperCase()}E=3Dt[r]=3Dw}}da=3DE}jb[kb]=3Dda}s.=
+push('"');q=3Ds.join("")}z.location.replace("javascript:"+q)}f=3Dg}catch(=
+rb){z=3DGa().google_jobrunner;Ja(z)&&z.rl()}f&&(new =
+Ta(a)).set(b,Wa(a,b,c,i))}},Xa=3Dfunction(){return za&&Aa/za||typeof =
+window.google_hash_ratio=3D=3D"number"&&window.google_hash_ratio||h};wind=
+ow.google_loader_used=3Dg;var =
+Ya;if(Ya=3Dwindow.google_enable_async=3D=3D=3Dg||Da&&g)Ya=3Dwindow.google=
+_enable_async=3D=3D=3Di?i:(F&&L(7)||Ma||La&&!!window.document.body)&&!win=
+dow.google_container_id&&(!window.google_ad_output||window.google_ad_outp=
+ut=3D=3D"html");=0A=
+if(Ya){var Za=3Dwindow;if(Za.google_unique_id)++Za.google_unique_id;else =
+Za.google_unique_id=3D1;ya(window);for(var =
+Y=3Dwindow,_script$$inline_200=3D"script",$a,Z=3D{allowtransparency:'"tru=
+e"',frameborder:'"0"',height:'"'+Y.google_ad_height+'"',hspace:'"0"',marg=
+inwidth:'"0"',marginheight:'"0"',onload:'"'+Ua+'"',scrolling:'"no"',vspac=
+e:'"0"',width:'"'+Y.google_ad_width+'"'},ab=3DY.document,$=3DZ.id,bb=3D0;=
+!$||Y.document.getElementById($);)$=3D"aswift_"+bb++;Z.id=3D$;Z.name=3D$;=
+ab.write(Na(Z,Y.google_ad_width,Y.google_ad_height));=0A=
+$a=3D$;for(var cb,db=3D[],eb=3D0,fb=3DW.length;eb<fb;eb++){var =
+gb=3DW[eb];if(Y[gb]!=3Dh){var hb;try{var ib=3D[];Qa(new =
+Oa,Y[gb],ib);hb=3Dib.join("")}catch(lb){}hb&&wa(db,gb,"=3D",hb,";")}}cb=3D=
+db.join("");for(var mb=3D0,nb=3DW.length;mb<nb;mb++)Y[W[mb]]=3Dh;var =
+ob=3D(new Date).getTime(),pb=3DXa(),qb=3D["<!doctype =
+html><html><body><",_script$$inline_200,">",cb,"google_show_ads_impl=3Dtr=
+ue;google_unique_id=3D",Y.google_unique_id,';google_async_iframe_id=3D"',=
+$a,'";google_start_time=3D',j,";",pb?"google_hash_ratio=3D"+pb+";":"","go=
+ogle_bpp=3D",=0A=
+ob>j?ob-j:1,";</",_script$$inline_200,">",Va(),"</body></html>"].join("")=
+,sb=3DWa(Y,$a,qb,g);Ka().nq(sb,void =
+0)}else{window.google_start_time=3Dj;window.google_hash_ratio=3DXa();docu=
+ment.write(Va())};})();=0A=
+
+------=_NextPart_000_0000_01CB8712.38374B20--
